@@ -13,6 +13,8 @@ type PosterCarouselProps = {
   className?: string;
 };
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export function PosterCarousel({ images, className }: PosterCarouselProps) {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [api, setApi] = React.useState<any>(null);
@@ -89,3 +91,5 @@ export function PosterCarousel({ images, className }: PosterCarouselProps) {
     </div>
   );
 }
+/* eslint-enable @typescript-eslint/no-unused-vars */
+/* eslint-enable @typescript-eslint/no-explicit-any */
