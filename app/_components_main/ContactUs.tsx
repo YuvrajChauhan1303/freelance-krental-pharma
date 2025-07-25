@@ -15,7 +15,9 @@ export default function ContactUs() {
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -26,7 +28,6 @@ export default function ContactUs() {
     setSent(false);
 
     try {
-      // Now phone is also sent to the API
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -39,8 +40,8 @@ export default function ContactUs() {
 
       setSent(true);
       setForm(initialState);
-    } catch (err: any) {
-      setError(err.message || "Something went wrong.");
+    } catch (err: unknown) {
+      setError("Something went wrong." + err);
     } finally {
       setLoading(false);
     }
@@ -124,9 +125,7 @@ export default function ContactUs() {
             </div>
           )}
           {error && (
-            <div className="text-red-600 font-medium mt-2">
-              {error}
-            </div>
+            <div className="text-red-600 font-medium mt-2">{error}</div>
           )}
         </form>
       </div>
@@ -138,23 +137,3 @@ export default function ContactUs() {
     </div>
   );
 }
-
-/*
-=========================
-You also need to update the following files to handle the phone number:
-
-1. app/api/contact/route.ts
-   - Update the destructuring to include `phone`:
-     const { name, email, phone, message } = await req.json();
-   - Add a check for `phone` in the validation.
-   - Pass `phone` to sendMail:
-     await sendMail({ name, email, phone, message });
-
-2. lib/mail.ts
-   - Update the sendMail function to accept `phone`:
-     export const sendMail = async (data: { name: string; email: string; phone: string; message: string; }) => { ... }
-   - Add phone to the email body (both text and html):
-     text: `Name: ...\nEmail: ...\nPhone: ...\nMessage: ...`
-     html: ... include <p><strong>Phone:</strong> ...</p>
-=========================
-*/
