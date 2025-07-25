@@ -1,83 +1,96 @@
 "use client";
-
 import { useState } from "react";
 
-export default function ContactUs() {
-  const [formData, setFormData] = useState({
+export default function ContactPage() {
+  const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
-  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [response, setResponse] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("Sending...");
+    setLoading(true);
+    setResponse(null);
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(form),
+        headers: { "Content-Type": "application/json" },
+      });
 
-    if (res.ok) {
-      setFormData({ name: "", email: "", phone: "", message: "" });
-      setStatus("Message sent successfully!");
-    } else {
-      setStatus("Failed to send message.");
+      const data = await res.json();
+      if (data.success) {
+        setResponse("Message sent successfully!");
+        setForm({ name: "", email: "", phone: "", message: "" });
+      } else {
+        setResponse("Failed to send message.");
+      }
+    } catch (err) {
+      console.error(err);
+      setResponse("An error occurred.");
     }
+
+    setLoading(false);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 max-w-lg mx-auto p-4">
-      <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        value={formData.name}
-        onChange={handleChange}
-        required
-        className="w-full p-2 border rounded"
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-        className="w-full p-2 border rounded"
-      />
-      <input
-        type="tel"
-        name="phone"
-        placeholder="Phone Number"
-        value={formData.phone}
-        onChange={handleChange}
-        required
-        className="w-full p-2 border rounded"
-      />
-      <textarea
-        name="message"
-        placeholder="Your Message"
-        value={formData.message}
-        onChange={handleChange}
-        required
-        className="w-full p-2 border rounded"
-      />
-      <button type="submit" className="bg-black text-white px-4 py-2 rounded">
-        Send
-      </button>
-      <p className="text-sm text-gray-600">{status}</p>
-    </form>
+    <div className="max-w-xl mx-auto mt-16">
+      <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={form.name}
+          onChange={handleChange}
+          required
+          className="w-full p-2 border rounded"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          value={form.email}
+          onChange={handleChange}
+          required
+          className="w-full p-2 border rounded"
+        />
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Your Phone (optional)"
+          value={form.phone}
+          onChange={handleChange}
+          className="w-full p-2 border rounded"
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          value={form.message}
+          onChange={handleChange}
+          required
+          className="w-full p-2 border rounded h-32"
+        />
+        <button
+          type="submit"
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          disabled={loading}
+        >
+          {loading ? "Sending..." : "Send Message"}
+        </button>
+        {response && <p className="mt-2 text-sm text-gray-700">{response}</p>}
+      </form>
+    </div>
   );
 }
