@@ -30,7 +30,7 @@ const Gummies = ({ image, title, className }: GummiesProps) => {
       </div>
       <div className="w-full flex justify-center mb-6">
         <button
-          className="mt-4 px-8 py-2 bg-[#D9D9D9] border-2 active:scale-95 border-black text-black rounded-lg font-semibold transition hover:bg-gray-300"
+          className="mt-4 px-8 py-2 bg-[#D9D9D9] border-2 active:scale-95 border-black text-black rounded-md font-semibold transition hover:bg-gray-300"
           type="button"
         >
           VIEW ALL
