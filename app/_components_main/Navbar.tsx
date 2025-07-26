@@ -1,31 +1,44 @@
 "use client";
 
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const [productsOpen, setProductsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLLIElement>(null);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setProductsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const navItems = [
-    "Home",
-    "Products",
-    "Philosophy",
-    "Blogs",
-    "Why KP",
-    "Contact Us",
+    { label: "Home" },
+    { label: "Products", isDropdown: true },
+    { label: "Philosophy" },
+    { label: "Blogs" },
+    { label: "Why KP" },
+    { label: "Contact Us" },
   ];
 
-  const getHref = (label: string) => {
-    return label === "Home"
-      ? "/" // special case for Home
-      : "/" + label.toLowerCase().replace(/\s+/g, "-");
-  };
+  const getHref = (label: string) =>
+    label === "Home" ? "/" : "/" + label.toLowerCase().replace(/\s+/g, "-");
 
   return (
     <div className="flex mx-12 mt-8 items-center justify-between">
       <div className="w-48 h-16 flex items-center justify-center">
-        {/* Logo using next/image */}
         <Image
           src="/images/logo/logo.png"
           alt="Logo"
@@ -36,26 +49,91 @@ const Navbar = () => {
           priority
         />
       </div>
-      <div>
-        <ul className="flex space-x-6">
-          {navItems.map((item, index) => {
-            const href = getHref(item);
-            const isActive = pathname === href;
 
-            return (
-              <li key={index}>
-                <a
-                  href={href}
-                  className={`px-4 py-2 rounded-lg font-medium uppercase transition-all ${
-                    isActive
-                      ? "bg-[#018578] text-white"
-                      : "text-gray-700 hover:text-black"
-                  }`}
-                >
-                  {item}
-                </a>
-              </li>
-            );
+      <div>
+        <ul className="flex items-center space-x-6">
+          {navItems.map((item, index) => {
+            if (item.isDropdown) {
+              return (
+                <li key={index} ref={dropdownRef} className="relative">
+                  <a
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setProductsOpen((prev) => !prev);
+                    }}
+                    className={`px-4 py-2 rounded-lg font-medium uppercase transition-all flex items-center gap-1 ${
+                      pathname.startsWith("/products") ||
+                      pathname === "/kids-products" ||
+                      pathname === "/adult-products"
+                        ? "bg-[#018578] text-white"
+                        : "text-gray-700 hover:text-black"
+                    }`}
+                  >
+                    <span>Products</span>
+                    <svg
+                      className={`w-4 h-4 transition-transform ${
+                        productsOpen ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </a>
+
+                  {productsOpen && (
+                    <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-20">
+                      <a
+                        href="/kids-products"
+                        className={`block px-4 py-3 text-sm rounded-t-lg transition-colors ${
+                          pathname === "/kids-products"
+                            ? "bg-[#018578] text-white"
+                            : "text-gray-700 hover:bg-gray-100"
+                        }`}
+                        onClick={() => setProductsOpen(false)}
+                      >
+                        Kids Products
+                      </a>
+                      <a
+                        href="/adult-products"
+                        className={`block px-4 py-3 text-sm rounded-b-lg transition-colors ${
+                          pathname === "/adult-products"
+                            ? "bg-[#018578] text-white"
+                            : "text-gray-700 hover:bg-gray-100"
+                        }`}
+                        onClick={() => setProductsOpen(false)}
+                      >
+                        Adult Products
+                      </a>
+                    </div>
+                  )}
+                </li>
+              );
+            } else {
+              const href = getHref(item.label);
+              const isActive = pathname === href;
+              return (
+                <li key={index}>
+                  <a
+                    href={href}
+                    className={`px-4 py-2 rounded-lg font-medium uppercase transition-all ${
+                      isActive
+                        ? "bg-[#018578] text-white"
+                        : "text-gray-700 hover:text-black"
+                    }`}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              );
+            }
           })}
         </ul>
       </div>
