@@ -2,6 +2,7 @@
 
 import React from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -23,8 +24,17 @@ const Navbar = () => {
 
   return (
     <div className="flex mx-12 mt-8 items-center justify-between">
-      <div className="w-48 h-16 rounded-2xl bg-gray-300 flex items-center justify-center">
-        <p>LOGO</p>
+      <div className="w-48 h-16 flex items-center justify-center">
+        {/* Logo using next/image */}
+        <Image
+          src="/images/logo/logo.png"
+          alt="Logo"
+          width={225}
+          height={64}
+          className="h-16 w-auto object-contain"
+          style={{ maxHeight: "64px" }}
+          priority
+        />
       </div>
       <div>
         <ul className="flex space-x-6">
@@ -38,7 +48,7 @@ const Navbar = () => {
                   href={href}
                   className={`px-4 py-2 rounded-lg font-medium uppercase transition-all ${
                     isActive
-                      ? "bg-zinc-600 text-white"
+                      ? "bg-[#018578] text-white"
                       : "text-gray-700 hover:text-black"
                   }`}
                 >

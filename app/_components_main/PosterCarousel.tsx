@@ -19,8 +19,8 @@ export function PosterCarousel({ images, className }: PosterCarouselProps) {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [api, setApi] = React.useState<any>(null);
 
-  // For now, only 4 slides
-  const slideCount = 4;
+  // Use the number of images provided, fallback to 0 if not present
+  const slideCount = images.length;
 
   React.useEffect(() => {
     if (!api) return;
@@ -38,7 +38,7 @@ export function PosterCarousel({ images, className }: PosterCarouselProps) {
 
   // Auto-advance every 3 seconds
   React.useEffect(() => {
-    if (!api) return;
+    if (!api || slideCount === 0) return;
     const interval = setInterval(() => {
       const nextIndex = (api.selectedScrollSnap() + 1) % slideCount;
       api.scrollTo(nextIndex);
@@ -50,22 +50,18 @@ export function PosterCarousel({ images, className }: PosterCarouselProps) {
     <div className={cn("w-full", className)}>
       <Carousel setApi={setApi} className="relative">
         <CarouselContent>
-          {[...Array(slideCount)].map((_, idx) => (
+          {images.map((img, idx) => (
             <CarouselItem
               key={idx}
               className="flex justify-center items-center"
             >
-              {/* 
-              <img
-                src={img.src}
-                alt={img.alt || `Poster ${idx + 1}`}
-                className="rounded-lg object-cover w-full h-64"
-              />
-              */}
               <div className="w-full" style={{ height: "80vh" }}>
-                <div className="flex items-center justify-center w-full h-full bg-gray-200 rounded-lg text-3xl font-bold text-gray-500">
-                  POSTER
-                </div>
+                <img
+                  src={img.src}
+                  alt={img.alt || `Poster ${idx + 1}`}
+                  className="rounded-lg object-cover w-full h-full"
+                  style={{ objectPosition: "center" }}
+                />
               </div>
             </CarouselItem>
           ))}
@@ -73,7 +69,7 @@ export function PosterCarousel({ images, className }: PosterCarouselProps) {
         {/* Arrows removed */}
       </Carousel>
       <div className="flex justify-center mt-4 gap-2">
-        {[...Array(slideCount)].map((_, idx) => (
+        {images.map((_, idx) => (
           <button
             key={idx}
             className={cn(

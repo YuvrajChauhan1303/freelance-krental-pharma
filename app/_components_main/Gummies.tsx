@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import Image from "next/image";
 
 type GummiesProps = {
   image?: { src: string; alt?: string };
@@ -6,37 +8,55 @@ type GummiesProps = {
   className?: string;
 };
 
-const Gummies = ({ image, title, className }: GummiesProps) => {
+const Gummies: React.FC<GummiesProps> = ({ image, title, className }) => {
+  // Changed dimensions
+  const imageWidth = 260 * 1.3; // 390
+  const imageHeight = 310 * 1.3; // 465
+
   return (
-    <div
-      className={`w-[34vw] h-[79vh] rounded-lg flex flex-col items-center justify-between${
-        className ? ` ${className}` : ""
-      } `}
-      style={{ overflow: "hidden" }}
+    <section
+      className={`flex flex-col items-center justify-between bg-white w-[34vw] h-[70vh] overflow-hidden ${
+        className || ""
+      }`}
     >
-      <div className="w-[34vw] h-[15vh] bg-[#9C9898] flex items-center justify-center text-xl font-bold rounded-t-lg">
-        {title}
-      </div>
-      <div className="w-[34vw] h-[53vh] bg-[#D9D9D9] flex items-center justify-center rounded-b-lg">
+      <header className="w-full h-[7vh] flex items-center justify-center">
+        <h2 className="text-2xl font-extrabold uppercase tracking-wide text-[#018578]">
+          {title}
+        </h2>
+      </header>
+      <div className="flex-1 w-full flex items-center justify-center">
         {image && image.src ? (
-          <img
-            src={image.src}
-            alt={image.alt || "Gummy image"}
-            className="object-contain max-h-full max-w-full"
-          />
+          <div
+            className="relative flex items-center justify-center"
+            style={{
+              width: imageWidth,
+              height: imageHeight,
+              minHeight: 140,
+            }}
+          >
+            <Image
+              src={image.src}
+              alt={image.alt || "Gummy image"}
+              width={imageWidth}
+              height={imageHeight}
+              style={{ objectFit: "contain" }}
+              sizes="(max-width: 768px) 80vw, 14vw"
+              priority
+            />
+          </div>
         ) : (
-          "IMAGE"
+          <span className="text-gray-400 text-lg">No Image</span>
         )}
       </div>
-      <div className="w-full flex justify-center mb-6">
+      <footer className="w-full flex justify-center py-4">
         <button
-          className="mt-4 px-8 py-2 bg-[#D9D9D9] border-2 active:scale-95 border-black text-black rounded-md font-semibold transition hover:bg-gray-300"
           type="button"
+          className="px-7 py-2 bg-[#018578] text-white font-semibold rounded-md border-2 border-[#018578] transition hover:bg-[#01695f] active:scale-95 shadow"
         >
           VIEW ALL
         </button>
-      </div>
-    </div>
+      </footer>
+    </section>
   );
 };
 
