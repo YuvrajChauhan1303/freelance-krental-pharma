@@ -1,14 +1,16 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 type GummiesProps = {
   image?: { src: string; alt?: string };
   title: string;
   className?: string;
+  link?: string;
 };
 
-const Gummies: React.FC<GummiesProps> = ({ image, title, className }) => {
+const Gummies: React.FC<GummiesProps> = ({ image, title, className, link }) => {
   // Changed dimensions
   const imageWidth = 260 * 1.3; // 390
   const imageHeight = 310 * 1.3; // 465
@@ -49,12 +51,22 @@ const Gummies: React.FC<GummiesProps> = ({ image, title, className }) => {
         )}
       </div>
       <footer className="w-full flex justify-center py-4">
-        <button
-          type="button"
-          className="px-7 py-2 bg-[#018578] text-white font-semibold rounded-md border-2 border-[#018578] transition hover:bg-[#01695f] active:scale-95 shadow"
-        >
-          VIEW ALL
-        </button>
+        {link ? (
+          <Link
+            href={link}
+            className="px-7 py-2 bg-[#018578] text-white font-semibold rounded-md border-2 border-[#018578] transition hover:bg-[#01695f] active:scale-95 shadow"
+          >
+            VIEW ALL
+          </Link>
+        ) : (
+          <button
+            type="button"
+            className="px-7 py-2 bg-[#018578] text-white font-semibold rounded-md border-2 border-[#018578] transition hover:bg-[#01695f] active:scale-95 shadow"
+            disabled
+          >
+            VIEW ALL
+          </button>
+        )}
       </footer>
     </section>
   );
