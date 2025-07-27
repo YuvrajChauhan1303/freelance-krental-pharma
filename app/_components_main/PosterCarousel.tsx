@@ -66,10 +66,10 @@ export function PosterCarousel({ images, className }: PosterCarouselProps) {
                   fill
                   className="rounded-lg object-cover"
                   style={{ objectPosition: "center" }}
-                  loading="lazy"
+                  loading={idx === 0 ? "eager" : "lazy"}
                   sizes="100vw"
                   priority={idx === 0}
-                  // Only the first image is priority, rest are lazy
+                  // Only the first image is priority and eager, rest are lazy
                 />
               </div>
             </CarouselItem>

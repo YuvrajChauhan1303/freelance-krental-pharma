@@ -3,6 +3,8 @@ import { Marquee } from "./_components_main/Marquee";
 import Gummies from "./_components_main/Gummies";
 import ContactUs from "./_components_main/ContactUs";
 import USP from "./_components_main/USP";
+
+
 const posterImages = [
   { src: "/images/carouselPoster/poster1.png", alt: "Poster 1" },
   { src: "/images/carouselPoster/poster2.png", alt: "Poster 2" },
@@ -28,6 +30,7 @@ export default function Home() {
       <div>
         <ContactUs />
       </div>
+      
     </div>
   );
 }
