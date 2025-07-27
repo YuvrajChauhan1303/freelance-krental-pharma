@@ -25,7 +25,8 @@ const Page: React.FC<PageProps> = ({ bannerImage, gummies, taglines }) => {
           alt={bannerImage.alt}
           fill
           className="object-cover object-center"
-          priority
+          // Remove priority to allow lazy loading
+          loading="lazy"
           sizes="100vw"
         />
         {/* Heading overlay */}
@@ -46,6 +47,7 @@ const Page: React.FC<PageProps> = ({ bannerImage, gummies, taglines }) => {
                   fill
                   className="object-contain"
                   sizes="160px"
+                  loading="lazy"
                 />
               </div>
               <span className="font-semibold text-lg mb-1">{gummy.alt}</span>
@@ -68,6 +70,7 @@ const Page: React.FC<PageProps> = ({ bannerImage, gummies, taglines }) => {
                 fill
                 className="object-contain"
                 sizes="160px"
+                loading="lazy"
               />
             </div>
             <span className="font-semibold text-lg mb-1">{gummies[9].alt}</span>

@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import {
   Carousel,
   CarouselContent,
@@ -55,12 +56,20 @@ export function PosterCarousel({ images, className }: PosterCarouselProps) {
               key={idx}
               className="flex justify-center items-center"
             >
-              <div className="w-full" style={{ height: "80vh" }}>
-                <img
+              <div
+                className="w-full"
+                style={{ height: "80vh", position: "relative" }}
+              >
+                <Image
                   src={img.src}
                   alt={img.alt || `Poster ${idx + 1}`}
-                  className="rounded-lg object-cover w-full h-full"
+                  fill
+                  className="rounded-lg object-cover"
                   style={{ objectPosition: "center" }}
+                  loading="lazy"
+                  sizes="100vw"
+                  priority={idx === 0}
+                  // Only the first image is priority, rest are lazy
                 />
               </div>
             </CarouselItem>
