@@ -119,3 +119,10 @@
   }
 }
 
+.gummy-hover {
+  transition: background 2.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.gummy-hover:hover {
+  transform: scale(1.1);
+}
