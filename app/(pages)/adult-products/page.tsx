@@ -20,7 +20,7 @@ const productNames = [
 ];
 
 const gummies = productNames.map((name, i) => ({
-  src: `/images/products/adults/a${i + 1}.png`,
+  src: `/images/products/adults/adult${i + 1}.png`,
   alt: name,
 }));
 
