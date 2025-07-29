@@ -6,6 +6,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 
@@ -14,13 +15,10 @@ type PosterCarouselProps = {
   className?: string;
 };
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 export function PosterCarousel({ images, className }: PosterCarouselProps) {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
-  const [api, setApi] = React.useState<any>(null);
+  const [api, setApi] = React.useState<CarouselApi | null>(null);
 
-  // Use the number of images provided, fallback to 0 if not present
   const slideCount = images.length;
 
   React.useEffect(() => {
@@ -29,15 +27,12 @@ export function PosterCarousel({ images, className }: PosterCarouselProps) {
       setSelectedIndex(api.selectedScrollSnap());
     };
     api.on("select", onSelect);
-    // Set initial index
     setSelectedIndex(api.selectedScrollSnap());
-    // Cleanup
     return () => {
       api.off("select", onSelect);
     };
   }, [api]);
 
-  // Auto-advance every 3 seconds
   React.useEffect(() => {
     if (!api || slideCount === 0) return;
     const interval = setInterval(() => {
@@ -69,13 +64,11 @@ export function PosterCarousel({ images, className }: PosterCarouselProps) {
                   loading={idx === 0 ? "eager" : "lazy"}
                   sizes="100vw"
                   priority={idx === 0}
-                  // Only the first image is priority and eager, rest are lazy
                 />
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        {/* Arrows removed */}
       </Carousel>
       <div className="flex justify-center mt-4 gap-2">
         {images.map((_, idx) => (
@@ -96,5 +89,3 @@ export function PosterCarousel({ images, className }: PosterCarouselProps) {
     </div>
   );
 }
-/* eslint-enable @typescript-eslint/no-unused-vars */
-/* eslint-enable @typescript-eslint/no-explicit-any */

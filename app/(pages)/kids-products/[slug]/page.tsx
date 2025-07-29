@@ -12,18 +12,19 @@ type ProductDetail = {
   note: string;
 };
 
-const kidsProducts: ProductDetail[] = require("./data.json");
+import kidsProducts from "./data.json" assert { type: "json" };
 
 function getProductById(id: number): ProductDetail | undefined {
   return kidsProducts.find((p) => p.id === id);
 }
 
-type PageProps = {
-  params: { slug: string };
-};
+export interface PageProps {
+  params: Promise<{ slug: string }>;
+}
 
-const Page = ({ params }: PageProps) => {
-  const productId = Number(params.slug);
+const Page = async ({ params }: PageProps) => {
+  const resolvedParams = await params;
+  const productId = Number(resolvedParams.slug);
   const product = getProductById(productId);
 
   if (!product) {
