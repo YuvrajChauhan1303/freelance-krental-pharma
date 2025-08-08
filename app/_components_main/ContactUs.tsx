@@ -57,12 +57,12 @@ export default function ContactPage() {
 
   return (
     <section className="w-full flex flex-col items-center justify-center mt-16">
-      <h1 className="text-3xl font-bold mb-10 text-center w-full">
-        Contact Us
-      </h1>
       <div className="flex flex-col md:flex-row bg-white w-full max-w-6xl mx-auto overflow-hidden">
         {/* Left: Form */}
         <div className="flex-[1.3] p-8 flex flex-col justify-center">
+          <h1 className="text-4xl font-bold mb-10 text-left w-full">
+            Contact Us
+          </h1>
           <form onSubmit={handleSubmit} className="space-y-6 w-full">
             {/* First row: First Name & Last Name */}
             <div className="flex flex-col md:flex-row gap-4">

@@ -47,7 +47,7 @@ const FullWidthPosterCarousel: React.FC = () => {
         className="relative w-full"
       >
         <CarouselContent>
-          {[1, 2, 3, 4].map((num, idx) => (
+          {[1, 2, 3, 4].map((num) => (
             <CarouselItem
               key={num}
               className="flex justify-center items-center"

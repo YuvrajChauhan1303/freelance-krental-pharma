@@ -3,6 +3,7 @@ import { Marquee } from "./_components_main/Marquee";
 import Gummies from "./_components_main/Gummies";
 import ContactUs from "./_components_main/ContactUs";
 import USP from "./_components_main/USP";
+import BlogSection from "./_components_main/BlogSection";
 
 const posterImages = [
   { src: "/images/carouselPoster/poster1.png", alt: "Poster 1" },
@@ -34,21 +35,24 @@ export default function Home() {
         />
       </div>
       <USP />
+      <div>
+        <BlogSection />
+      </div>
       <div className="flex justify-center items-center gap-6 my-8">
         <img
           src="/images/landingImages/pic1.png"
           alt="Landing Pic 1"
-          className="w-[27vw] h-[38vh] object-contain"
+          className="w-[40.5vw] h-[57vh] object-contain"
         />
         <img
           src="/images/landingImages/pic2.png"
           alt="Landing Pic 2"
-          className="w-[27vw] h-[38vh] object-contain"
+          className="w-[40.5vw] h-[57vh] object-contain"
         />
         <img
           src="/images/landingImages/pic3.png"
           alt="Landing Pic 3"
-          className="w-[27vw] h-[38vh] object-contain"
+          className="w-[40.5vw] h-[57vh] object-contain"
         />
       </div>
       <div>
