@@ -19,7 +19,7 @@ const gummiesImages = [
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <PosterCarousel className={"my-6"} images={posterImages} />
       <Marquee />
       <div className="flex gap-48 justify-center w-[100vw] mt-10 mb-8 overflow-hidden">
