@@ -27,7 +27,7 @@ const Navbar = () => {
   const navItems = [
     { label: "Home" },
     { label: "Products", isDropdown: true },
-    { label: "Philosophy" },
+    { label: "About Us" },
     { label: "Blogs" },
     { label: "Why KP" },
     { label: "Contact Us" },

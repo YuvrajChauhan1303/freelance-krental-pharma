@@ -25,10 +25,7 @@ export function Marquee() {
         }}
       >
         CRAFTING HEALTH, DELIVERING HOPE&nbsp;&nbsp;&nbsp;CRAFTING HEALTH,
-        DELIVERING HOPE&nbsp;&nbsp;&nbsp;CRAFTING HEALTH, DELIVERING
-        HOPE&nbsp;&nbsp;&nbsp;CRAFTING HEALTH, DELIVERING
-        HOPE&nbsp;&nbsp;&nbsp;CRAFTING HEALTH, DELIVERING
-        HOPE&nbsp;&nbsp;&nbsp;CRAFTING HEALTH, DELIVERING HOPE
+        DELIVERING HOPE&nbsp;&nbsp;&nbsp;CRAFTING HEALTH, DELIVERING HOPE
       </div>
       <style>
         {`

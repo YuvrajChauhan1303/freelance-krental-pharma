@@ -34,6 +34,23 @@ export default function Home() {
         />
       </div>
       <USP />
+      <div className="flex justify-center items-center gap-6 my-8">
+        <img
+          src="/images/landingImages/pic1.png"
+          alt="Landing Pic 1"
+          className="w-[27vw] h-[38vh] object-contain"
+        />
+        <img
+          src="/images/landingImages/pic2.png"
+          alt="Landing Pic 2"
+          className="w-[27vw] h-[38vh] object-contain"
+        />
+        <img
+          src="/images/landingImages/pic3.png"
+          alt="Landing Pic 3"
+          className="w-[27vw] h-[38vh] object-contain"
+        />
+      </div>
       <div>
         <ContactUs />
       </div>
