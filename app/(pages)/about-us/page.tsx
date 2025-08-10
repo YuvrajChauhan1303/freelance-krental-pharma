@@ -1,5 +1,4 @@
 "use client";
-import FullWidthPosterCarousel from "./_components/PosterCarousel";
 
 const page = () => {
   return (

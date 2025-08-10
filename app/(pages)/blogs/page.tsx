@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Blog from "./_components/Blog";
-import FullWidthPosterCarousel from "./_components/PosterCarousel";
+
 
 type BlogType = {
   image: { src: string; alt?: string };

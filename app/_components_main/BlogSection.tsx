@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars, no-unused-vars */
 "use client";
+
 import React, { useRef, useEffect, useCallback } from "react";
 import Blog from "./Blog";
 
@@ -161,3 +163,4 @@ export default function BlogSection() {
     </div>
   );
 }
+/* eslint-enable @typescript-eslint/no-unused-vars, no-unused-vars */

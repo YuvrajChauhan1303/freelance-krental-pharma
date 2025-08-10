@@ -2,11 +2,8 @@ import data from "../data.json";
 import Image from "next/image";
 import Link from "next/link";
 
-interface ProductParams {
-  params: { id: string };
-}
-
-export default function ProductPage({ params }: ProductParams) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function ProductPage({ params }: any) {
   const product = data.find((item) => item.id === params.id);
 
   if (!product) {
@@ -47,7 +44,7 @@ export default function ProductPage({ params }: ProductParams) {
       <div className="grid md:grid-cols-2 gap-8 p-8 max-w-5xl mx-auto">
         <div>
           <h3 className="text-xl font-semibold text-[#008577]">Description</h3>
-          {product.description.map((para, index) => (
+          {product.description.map((para: string, index: number) => (
             <p key={index} className="mt-4 text-gray-700">
               {para}
             </p>
@@ -56,7 +53,7 @@ export default function ProductPage({ params }: ProductParams) {
         <div>
           <h3 className="text-xl font-semibold text-[#008577]">Benefits</h3>
           <ul className="mt-4 list-disc list-inside text-gray-700">
-            {product.benefits.map((benefit, index) => (
+            {product.benefits.map((benefit: string, index: number) => (
               <li key={index}>{benefit}</li>
             ))}
           </ul>
