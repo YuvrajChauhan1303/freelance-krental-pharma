@@ -4,8 +4,13 @@ import FullWidthPosterCarousel from "./_components/PosterCarousel";
 const page = () => {
   return (
     <div className="min-h-screen ">
-      {/* Carousel Section */}
-      <FullWidthPosterCarousel />
+      <div className="w-full h-[40vh] relative mb-8">
+        <img
+          src="/images/aboutus/header.png"
+          alt="About Us header"
+          className="object-cover w-full h-full"
+        />
+      </div>
 
       <div className="max-w-6xl mx-auto mt-12 p-6 md:p-12 ">
         <section className="mb-10">

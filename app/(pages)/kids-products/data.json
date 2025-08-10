@@ -1,0 +1,232 @@
+[
+  {
+    "id": "1",
+    "header": "Appetite Booster",
+    "subheader": "Nourish Their Hunger. Support Their Growth.",
+    "header_desc": "A safe, effective and natural formula of herbs, vitamins and minerals designed to boost a healthy appetite for kids and achive an ideal body weight.",
+    "description": [
+      "Struggling with picky eating or low appetite in your child? Our Appetite Booster Gummies are a natural, tasty solution designed to gently encourage a healthy appetite and help kids reach and maintain an ideal body weight.",
+      "Formulated with a safe blend of herbs, vitamins, and minerals, these gummies not only improve digestion but also support overall health, immunity, and growth — all in a chewable format kids will love."
+    ],
+    "benefits": [
+      "Improve digestion",
+      "Normalize bowel movement",
+      "Boost immune system & protect against infection",
+      "Protect & support vital organs",
+      "Prevent various kinds anemia",
+      "Provide various other health benefits",
+      "Free of artificial colors or flavors",
+      "Free of gluten, lactose, wheat and yeast"
+     
+    ],
+    "bg_gradient": "linear-gradient(180deg, #8DA336 0%, #388335 100%)",
+    "image": "/images/products/kids/kids1.png"
+  },
+  {
+    "id": "2",
+    "header": "Multivitamin",
+    "subheader": "Everyday Wellness, All-in-One",
+    "header_desc": "This product contains a balanced formula of vitamins and other nutrients that promote children’s overall health",
+    "description": [
+      "Our Multivitamin Gummies are specially formulated to support the overall health, growth, and development of children in their most crucial early years. Packed with a balanced blend of essential vitamins, minerals, and nutrients, these delicious, chewable gummies are designed to meet the unique nutritional needs of growing kids.",
+      "They promote strong bones, sharp vision, enhanced immunity, and healthy nerve and muscle function—all vital for active, energetic lifestyles. A powerful mix of Vitamin A, C, D, E, and B-complex, along with Biotin, Folic Acid, and Zinc, helps to boost daily energy, support brain development, and maintain healthy skin, hair, and nails, all while encouraging natural physical and mental growth.",
+      "Gentle on little tummies and made with no artificial colors, flavors, gluten, lactose, wheat, or yeast, these gummies are a safe, clean, and enjoyable way to ensure your child gets their daily dose of essential nutrients — all in a fun and tasty form they'll love."
+    ],
+    "benefits": [
+      "Vitamin A: For healthy vision, teeth & bones.",
+      "Vitamin B5: For healthy nerves, growth & development",
+      "Vitamin B6: For healthy heart, nerves, muscle& immunity.",
+      "Vitamin B12: For healthy red blood cells, brain nerve, skin & hair.",
+      "Vitamin C: For healthy teeth, gums & immunity.",
+      "Vitamin D: For healthy bones, nerves & immunity.",
+      "Vitamin E: Antioxidant protection against cell damage.",
+      "Biotin: For healthy hair, skin nails, bones, nerves, growth & development.",
+      "Folic acid: For healthy red blood cells, nerves, intestine, frowth & development.",
+      "Zinc: For healthy digestion, immunity & wound healing."
+    ],
+    "bg_gradient": "linear-gradient(180deg, #8A4E74 0%, #5F294F 100%)",
+    "image": "/images/products/kids/kids2.png"
+  },
+  {
+    "id": "3",
+    "header": "Eye Care",
+    "subheader": "Screen-Time Protection, Naturally",
+    "header_desc": "This supplement is designed to boost healthy vision and to provide protection to the eyes of children when excessively exposed to high-energy photons of blue light from the screens of computers, laptops, cell phones and others.",
+    "description": [
+      "Support your child’s vision with Eye Care Gummies a gentle, natural supplement formulated to protect developing eyes from the harmful effects of prolonged screen exposure.",
+      "With increasing time spent on digital devices, children's eyes are exposed to high-energy blue light that can cause strain and long-term vision concerns. This formula helps reduce eye fatigue, supports healthy vision, and may lower the risk of eye disorders. Enriched with nutrients that promote strong blood vessels and overall eye health, it also contributes to improved mood, better endurance, and a stronger immune system.",
+      "Free from artificial colors, flavors, gluten, lactose, wheat, and yeast just clean, effective care for young eyes in a digital world."
+    ],
+    "benefits": [
+      "Improve eye fatigue",
+      "Decrease risk of eye disorders",
+      "Enhance endurance performance",
+      "Boost immune system",
+      "Improve mood",
+      "Maintain healthy blood vessels",
+      "Provide various other health benefits",
+      "Free of artificial colors or flavors",
+      "Free of gluten, lactose, wheat and yeast"
+    ],
+    "bg_gradient": "linear-gradient(180deg, #A76B27 0%, #8B3C25 100%)",
+    "image": "/images/products/kids/kids3.png"
+  },
+  {
+    "id": "4",
+    "header": "Sleep Aid",
+    "subheader": "Rest Easy, Wake Refreshed",
+    "header_desc": "This supplement is designed to boost healthy vision and to provide protection to the eyes of children when excessively exposed to high-energy photons of blue light from the screens of computers, laptops, cell phones and others.",
+    "description": [
+      "Let your nights be peaceful and your mornings refreshed with our Sleep Well Gummies — a gentle yet effective solution designed to help you unwind, relax, and achieve deep, restorative sleep naturally.",
+      "Crafted with a soothing blend of Melatonin, Chamomile, L-Theanine, and Valerian Root, these gummies work in harmony to calm a racing mind, reduce restlessness, and balance your body’s internal sleep-wake cycle. Whether you're dealing with stress, jet lag, or occasional sleeplessness, our formula helps you ease into sleep faster and stay asleep longer, so you can wake up feeling energized and clear-headed.",
+      "Unlike harsh sleep aids, these gummies are non-habit forming, free from artificial colors or preservatives, and leave no morning grogginess. With a naturally delicious taste and easy-to-chew texture, they make winding down your day as simple as a bedtime treat."
+    ],
+    "benefits": [
+      "Supports Deeper, Restful Sleep",
+      "Promotes Relaxation & Calm",
+      "Reduces Anxiety & Overthinking at Night",
+      "Helps Regulate Sleep-Wake Cycle (Circadian Rhythm)",
+      "Wake Up Refreshed Without Grogginess",
+      "Supports Immune Function During Sleep",
+      "Promotes Overall Physical & Mental Wellness",
+      "Free from Artificial Colors or Flavors",
+      "Free of Gluten, Lactose, Wheat, and Yeast"
+    ],
+    "bg_gradient": "linear-gradient(180deg, #2F7AA1 0%, #1D4269 100%)",
+    "image": "/images/products/kids/kids4.png"
+  },
+  {
+    "id": "6",
+    "header": "Ultra Omega Complete",
+    "subheader": "Smart Nutrition for Growing Minds",
+    "header_desc": "This product is a balanced, safe, and effective vegetarian formula for Omega 3,6,9 fatty acids, Vitamin E and beta carotene that may promote healthy brain development of children.",
+    "description": [
+      "Ultra Omega Complete is a carefully balanced and vegetarian-friendly formula packed with essential Omega 3, 6, and 9 fatty acids, along with Vitamin E and beta carotene. Designed to support healthy brain development in children, this natural supplement also contributes to overall growth, immunity, and cardiovascular wellness.",
+      "Its anti-inflammatory properties, combined with immune-boosting and neuroprotective benefits, make it a smart daily choice for your child’s health journey.",
+      "Free from artificial colors, flavors, gluten, lactose, wheat, and yeast — just pure, plant-based nutrition you can trust."
+    ],
+    "benefits": [
+      "Enhances brain function",
+      "Promotes growth and development",
+      "Reduces risks of brain and heart diseases",
+      "Boosts immune system",
+      "Reduces inflammation",
+      "Provides various other health benefits",
+      "Free of artificial colors or flavors",
+      "Free of gluten, lactose, wheat and yeast"
+    ],
+    "bg_gradient": "linear-gradient(180deg, #953B79 0%, #416B97 100%)",
+    "image": "/images/products/kids/kids5.png"
+  },
+  {
+    "id": "5",
+    "header": "Weight Balancer",
+    "subheader": "Nourish Smart, Grow Strong",
+    "header_desc": "A delicious and nutritious way to support healthy weight management! Packed with fiber, L-carnitine, inulin, vitamins B6 & D, and probiotics, these gummies promote digestion, metabolism, and overall well-being in growing children",
+    "description": [
+      "Support healthy weight management in kids with Weight Balancer Gummies — a delicious and scientifically crafted supplement designed to help growing children maintain a balanced, active lifestyle. This nutrient-rich formula combines the power of fiber, inulin, L-carnitine, probiotics, and essential vitamins like B6 and D to address the root causes of unhealthy weight gain while promoting overall well-being.",
+      "These gummies are thoughtfully formulated to improve digestion, support a healthy metabolism, and encourage steady, natural growth. Fiber and inulin work together to regulate appetite, promote a feeling of fullness, and maintain stable blood sugar levels, while also nurturing a healthy gut microbiome — crucial for nutrient absorption and immune function.",
+      "L-carnitine helps the body convert stored fat into usable energy, promoting fat metabolism and lean muscle development, especially beneficial for active kids. Vitamin B6 plays a key role in energy production, helping children stay focused and energized throughout the day, while Vitamin D supports bone strength, fat storage regulation, and insulin sensitivity, which are vital for long-term health."
+    ],
+    "benefits": [
+      "Fiber supports digestion, regulates blood sugar, encourages healthy metabolism, and promotes fullness",
+      "L-carnitine converts fat to energy, boosts energy levels, supports muscle growth, and aids in metabolic regulation",
+      "Inulin promotes fullness, supports digestion, regulates blood sugar, and aids metabolism",
+      "Vitamin B6 supports metabolism and energy production",
+      "Vitamin D regulates fat storage and insulin sensitivity",
+      "Provides various other health benefits",
+      "Free of artificial colors or flavors",
+      "Free of gluten, lactose, wheat and yeast"
+    ],
+    "bg_gradient": "linear-gradient(180deg, #3F9996 0%, #484D8C 100%)",
+    "image": "/images/products/kids/kids6.png"
+  },
+  {
+    "id": "7",
+    "header": "D3+K2 Bone Health",
+    "subheader": "Strong Bones, Stronger You",
+    "header_desc": "This product contains a balanced formula of vitamin D and calcium that promote healthy bones and teeth.",
+    "description": [
+      "Support your body’s foundation with D3 + K2 Bone Health — a scientifically balanced formula that combines Vitamin D3, Vitamin K2, and Calcium to promote strong bones, healthy teeth, and overall vitality.",
+      "Calcium is a key building block for bone development and strength, but without the right support, it can’t do its job effectively. That’s where Vitamin D3 comes in — it enhances the absorption of calcium and phosphorus, ensuring these essential minerals are properly delivered and utilized by your body. Vitamin K2 plays a crucial role by guiding calcium to where it’s needed most — the bones and teeth — and away from arteries and soft tissues, supporting both skeletal integrity and heart health.",
+      "This comprehensive formula not only supports bone density and structural strength, but also contributes to optimal muscle function, nerve signaling, and a well-functioning immune system — making it a smart daily supplement for long-term health and mobility."
+    ],
+    "benefits": [
+      "Calcium is critical for bones and teeth formation and growth.",
+      "Vitamin D enhances the absorption of dietary calcium and phosphorus and their deposition in bones and teeth.",
+      "Vitamin D is needed for optimal nerve and muscle functions.",
+      "Vitamin D is needed to maintain a healthy immune system that protects the body against infections and cancer.",
+      "Provide various other health benefits.",
+      "Free of artificial colors or flavors.",
+      "Free of gluten, lactose, wheat, and yeast."
+    ],
+    "bg_gradient": "linear-gradient(180deg, #B25784 0%, #AF8850 100%)",
+    "image": "/images/products/kids/kids7.png"
+  },
+  {
+    "id": "8",
+    "header": "Immune Booster",
+    "subheader": "Daily Defense for Growing Bodies",
+    "header_desc": "This product is a balanced, safe, and effective dietary supplement of vitamins, herbs, and other nutrients designed to boost the immune system and to provide maximal protection against various pathogenic infections.",
+    "description": [
+      "Strengthen your child’s natural defenses with Immune Booster Gummies — a balanced, safe, and effective blend of vitamins, herbs, and nutrients formulated to support a resilient immune system.",
+      "This powerful formula helps reduce the risk of recurrent respiratory infections, supports recovery from common colds and flu, and improves inflammatory and autoimmune conditions. Rich in antioxidants, it protects against cell and tissue damage caused by free radicals, while also offering relief for asthma-related symptoms. A daily dose of wellness that helps your child stay strong, active, and protected year-round."
+    ],
+    "benefits": [
+      "Lower the risk of recurrent respiratory infections and complications",
+      "Prevent and improve common cold and influenza",
+      "Improve inflammatory disorders",
+      "Prevent cell and tissue damage induced by free radicals",
+      "Prevent and improve autoimmune disorders",
+      "Improve asthma",
+      "Provide various other health benefits",
+      "Free of artificial colors or flavors"
+    ],
+    "bg_gradient": "linear-gradient(180deg, #95A637 0%, #428635 100%)",
+    "image": "/images/products/kids/kids8.png"
+  },
+  {
+    "id": "9",
+    "header": "Height Booster",
+    "subheader": "Support Natural Growth, Naturally",
+    "header_desc": "Give your child the gift of growth with our Height Boosting Gummies! Packed with essential nutrients like calcium, vitamin D, and zinc, these delicious gummies support natural bone development, ensuring your little one reaches their full height potential.",
+    "description": [
+      "Help your child reach their full height potential with Height Booster Gummies — a tasty, chewable supplement carefully formulated to support bone strength, growth, and healthy development during their most important growing years.",
+      "Packed with Calcium, Vitamin D, and Zinc, these gummies deliver a powerful trio of nutrients essential for skeletal development and height gain. Calcium acts as the primary building block for strong and dense bones, ensuring a solid foundation for physical growth. Vitamin D plays a critical role in enhancing the absorption of calcium and phosphorus, allowing these minerals to be effectively utilized for bone mineralization and joint support.",
+      "Zinc, a vital trace element, supports cell division, tissue repair, and bone regeneration, all of which are crucial for proper growth and development. It also aids in immune function and enzyme production, contributing to your child’s overall health and resilience."
+    ],
+    "benefits": [
+      "Calcium is critical for strong bones development and growth.",
+      "Vitamin D enhances the absorption of dietary calcium and phosphorus and their deposition for strong bones.",
+      "Zinc supports bone growth, cell division, and tissue repair.",
+      "Vitamin D ensures proper bone mineralization, reducing the risk of stunted growth in children.",
+      "Provide various other health benefits.",
+      "Free of artificial colors or flavors.",
+      "Free of gluten, lactose, wheat, and yeast."
+    ],
+    "bg_gradient": "linear-gradient(180deg, #AF7F3A 0%, #9B4357 100%)",
+    "image": "/images/products/kids/kids9.png"
+  },
+  {
+    "id": "10",
+    "header": "Brain Developer",
+    "subheader": "Smart Nutrition for Growing Minds",
+    "header_desc": "The delicious, nutrient-packed treat designed to support kids' cognitive development! Enriched with essential vitamins, Omega-3, and DHA, these fun, chewy gummies help enhance focus, memory, and learning. Tasty, healthy, and parent-approved",
+    "description": [
+      "Support your child's brainpower with our Brain Developer Gummies — a delicious, nutrient-rich supplement designed to fuel mental performance and healthy development. Packed with essential vitamins, Omega-3, and DHA, these fun and flavorful gummies promote focus, memory, learning, and overall cognitive function.",
+      "Whether it's study time or playtime, these gummies help keep young minds sharp and energized—without any artificial nasties."
+    ],
+    "benefits": [
+      "Enhances cognitive function",
+      "Rich in essential nutrients",
+      "Supports mental alertness",
+      "Promotes healthy brain development",
+      "Boosts energy levels",
+      "Provides various other health benefits",
+      "Free of artificial colors or flavors",
+      "Free of gluten, lactose, wheat and yeast"
+    ],
+    "bg_gradient": "linear-gradient(90deg, #5D8537 0%, #997D1F 100%)",
+    "image": "/images/products/kids/kids10.png"
+  }
+]

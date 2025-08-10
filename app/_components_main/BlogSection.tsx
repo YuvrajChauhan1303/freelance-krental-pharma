@@ -2,10 +2,9 @@
 import React, { useRef, useEffect, useCallback } from "react";
 import Blog from "./Blog";
 
-
 const blogs = [
   {
-    image: { src: "/images/blogs/placeholder.png", alt: "Blog 1" },
+    image: { src: "/images/blogs/blog1.png", alt: "Blog 1" },
     title: "Natural Stress Relief That Tastes Like Calm",
     author: "Sujal Patel",
     date: "May 10, 2024",
@@ -14,7 +13,7 @@ const blogs = [
     readMoreLink: "/blogs/stress-relief-gummies",
   },
   {
-    image: { src: "/images/blogs/placeholder.png", alt: "Blog 2" },
+    image: { src: "/images/blogs/blog2.png", alt: "Blog 2" },
     title: "Smart Bites for Bright Minds: Brain Development That Tastes Yummy!",
     author: "Diya Dugar",
     date: "April 22, 2024",
@@ -23,7 +22,7 @@ const blogs = [
     readMoreLink: "/blogs/brain-development-gummies",
   },
   {
-    image: { src: "/images/blogs/placeholder.png", alt: "Blog 3" },
+    image: { src: "/images/blogs/blog3.png", alt: "Blog 3" },
     title: "Sleep That Feels Like a Dream: Rest Easy with Sleep Aid Gummies",
     author: "Sujal Patel",
     date: "March 15, 2024",
@@ -32,7 +31,7 @@ const blogs = [
     readMoreLink: "/blogs/sleep-aid-gummies",
   },
   {
-    image: { src: "/images/blogs/placeholder.png", alt: "Blog 4" },
+    image: { src: "/images/blogs/blog4.png", alt: "Blog 4" },
     title:
       "Tiny Tummies, Big Appetites: The Yummy Way to Boost Your Kid’s Hunger Naturally!",
     author: "Diya Dugar",
@@ -42,7 +41,7 @@ const blogs = [
     readMoreLink: "/blogs/appetite-booster-gummies",
   },
   {
-    image: { src: "/images/blogs/placeholder.png", alt: "Blog 5" },
+    image: { src: "/images/blogs/blog5.png", alt: "Blog 5" },
     title: "Glow from Within: Your Daily Boost for Healthy Hair, Skin & Nails",
     author: "Diya Dugar",
     date: "January 12, 2024",

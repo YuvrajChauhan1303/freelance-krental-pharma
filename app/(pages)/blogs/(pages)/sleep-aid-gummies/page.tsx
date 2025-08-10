@@ -8,7 +8,7 @@ export default function Page() {
       author="Sujal Patel"
       date="July 28, 2025"
       image={{
-        src: "/images/blogs/placeholder.png",
+        src: "/images/blogs/blog3.png",
         alt: "Friends laughing together outdoors",
       }}
     >

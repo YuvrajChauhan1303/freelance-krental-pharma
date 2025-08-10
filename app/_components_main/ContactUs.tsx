@@ -52,9 +52,6 @@ export default function ContactPage() {
     setLoading(false);
   };
 
-  // Use green accent for borders and focus
-  // border-[#018578] and focus:ring-[#018578] (assuming #018578 is the green accent)
-
   return (
     <section className="w-full flex flex-col items-center justify-center mt-16">
       <div className="flex flex-col md:flex-row bg-white w-full max-w-6xl mx-auto overflow-hidden">

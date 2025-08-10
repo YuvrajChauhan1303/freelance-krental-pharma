@@ -8,7 +8,7 @@ export default function Page() {
       author="Sujal Patel"
       date="May 10, 2024"
       image={{
-        src: "/images/blogs/placeholder.png",
+        src: "/images/blogs/blog1.png",
         alt: "Stress Relief Gummies",
       }}
     >

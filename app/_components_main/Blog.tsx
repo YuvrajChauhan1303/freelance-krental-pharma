@@ -11,7 +11,7 @@ type BlogProps = {
 };
 
 const Blog: React.FC<BlogProps> = ({
-  image = { src: "/images/blog/placeholder.png", alt: "Blog image" },
+  image,
   title,
   author,
   date,

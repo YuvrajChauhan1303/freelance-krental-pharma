@@ -8,7 +8,7 @@ export default function Page() {
       author="Diya Dugar"
       date="July 29, 2025"
       image={{
-        src: "/images/blogs/placeholder.png",
+        src: "/images/blogs/blog4.png",
         alt: "Children smiling together outdoors",
       }}
     >

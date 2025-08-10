@@ -1,0 +1,222 @@
+[
+  {
+    "id": "1",
+    "header": "B12",
+    "subheader": "Natural Energy & Vital Health",
+    "header_desc": "This product is safe and an effective natural supplement of vitamin B12 which boost energy and enhance red blood cell formation",
+    "description": [
+      "Power up your day with Vitamin B12 Gummies — a safe and effective supplement designed to boost energy levels and support red blood cell formation naturally.",
+      "Vitamin B12 plays a vital role in maintaining healthy nerve function, brain activity, and cardiovascular wellness. This essential nutrient may also help prevent birth defects during pregnancy, reduce the risk of age-related macular degeneration, and improve mood and symptoms of depression. Supporting both mental and physical well-being, B12 is a daily must-have for vibrant, balanced health.",
+      "Free from artificial colors, flavors, gluten, lactose, wheat, and yeast — clean support for a healthier you."
+    ],
+    "benefits": [
+      "Prevent major birth defects",
+      "Preventing macular degeneration",
+      "Improving mood & symptoms of depression",
+      "Improving heart health",
+      "Provide various other health benefits",
+      "Free of artificial colors or flavors",
+      "Free of gluten, lactose, wheat and yeast"
+    ],
+    "bg_gradient": "linear-gradient(180deg, #CC545D 0%, #B31141 100%)",
+    "image": "/images/products/adults/adult1.png"
+  },
+  {
+    "id": "2",
+    "header": "Joint Care",
+    "subheader": "Move Freely. Live Fully.",
+    "header_desc": "A balanced, safe and effective natural supplement designed to improve pain and inflammation of arthritis and other inflammatory conditions.",
+    "description": [
+      "Ease discomfort and support joint mobility naturally with our Joint Care Gummies — a safe, effective herbal supplement formulated to reduce inflammation and relieve pain caused by arthritis and other inflammatory conditions.",
+      "Crafted for long-term wellness, this supplement doesn’t just soothe sore joints — it helps protect your body from within, supporting nerve health, immune balance, and cellular defense."
+    ],
+    "benefits": [
+      "Improve nerve pain (Fibromyalgia)",
+      "Reduce need of pain-killers and NSAIDs",
+      "Improve menstrual pain",
+      "Improve Vitiligo",
+      "Prevent damage caused by free radicals",
+      "Prevent various kinds of cancer",
+      "Provides various other health benefits",
+      "Free of artificial colors or flavors",
+      "Free of gluten, lactose, wheat and yeast"
+    ],
+    "bg_gradient": "linear-gradient(180deg, #4B6EA4 0%, #233470 100%)",
+    "image": "/images/products/adults/adult2.png"
+  },
+  {
+    "id": "3",
+    "header": "Sleep Aid",
+    "subheader": "Gentle Rest for Growing Minds",
+    "header_desc": "A balanced safe and effective formula of natural ingredients designed to induce and maintain a natural, enjoyable, refreshing and high quality sleep for adults.",
+    "description": [
+      "Support peaceful nights with Sleep Aid Gummies — a safe and effective blend of natural ingredients crafted to help children fall asleep faster and enjoy deeper, more refreshing sleep.",
+      "Formulated to gently calm the body and mind, these gummies promote relaxation, reduce anxiety and stress, and improve overall sleep quality. Better sleep not only boosts the immune system and protects against infections but also supports healthy digestion and may reduce the risk of long-term conditions like type 2 diabetes. Ideal for kids facing restlessness, stomach discomfort, or sleep-related stress.",
+      "Free from artificial colors, flavors, gluten, lactose, wheat, and yeast — restful nights, naturally."
+    ],
+    "benefits": [
+      "Have calming and relaxing effects",
+      "Improve anxiety and stress",
+      "Prevent type 2 diabetes due to inadequate duration of sleep during childhood",
+      "Boost immune system & provide protection against various kinds of infections",
+      "Improve gastrointestinal disorders including stomach irritation, intestinal colic & bloating",
+      "Free of artificial colors or flavors",
+      "Free of gluten, lactose, wheat and yeast"
+    ],
+    "bg_gradient": "linear-gradient(180deg, #6C4575 0%, #3D2C5F 100%)",
+    "image": "/images/products/adults/adult3.png"
+  },
+  {
+    "id": "4",
+    "header": "Stress Relief",
+    "subheader": "Relax Naturally. Feel Balanced.",
+    "header_desc": "Unwind, relax, and find your calm with our stress relief gummies! Specially formulated with natural ingredients to help you ease tension, stay focused, and feel balanced— anytime, anywhere. A delicious way to support your peace of mind!",
+    "description": [
+      "Support your child's brainpower with our Brain Developer Gummies — a delicious, nutrient-rich supplement designed to fuel mental performance and healthy development. Packed with essential vitamins, Omega-3, and DHA, these fun and flavorful gummies promote focus, memory, learning, and overall cognitive function.",
+      "Whether it's study time or playtime, these gummies help keep young minds sharp and energized—without any artificial nasties."
+    ],
+    "benefits": [
+      "Reduces stress & anxiety",
+      "Improves Sleep Quality",
+      "Boosts mood and focus",
+      "Provides a natural way to manage stress without dependency",
+      "Helps balance cortisol levels and maintain overall mental and physical health",
+      "Provides various other health benefits",
+      "Free of artificial colors or flavors",
+      "Free of gluten, lactose, wheat and yeast"
+    ],
+    "bg_gradient": "linear-gradient(180deg, #A58A4C 0%, #8E6F2D 100%)",
+    "image": "/images/products/adults/adult4.png"
+  },
+  {
+    "id": "5",
+    "header": "Libido",
+    "subheader": "Ignite Passion. Restore Vitality.",
+    "header_desc": "Boost your passion and energy with our libido gummies. Specially formulated with natural ingredients, they enhance desire, stamina, and overall vitality. Enjoy a delicious, convenient way to reignite intimacy and confidence—because feeling your best starts from within",
+    "description": [
+      "Feel empowered from the inside out with our Libido Boost Gummies—a delicious, natural supplement crafted to support your energy, passion, and confidence. With a powerful blend of herbal ingredients, these gummies help enhance desire, stamina, hormonal balance, and overall wellness.",
+      "Whether you're looking to reignite intimacy or simply feel more energized, our libido gummies are your go-to daily support for a healthier, more vibrant you."
+    ],
+    "benefits": [
+      "Enhances Libido & Desire",
+      "Supports Hormonal Balance",
+      "Boosts Energy & Stamina",
+      "Promotes Blood Flow",
+      "Reduces Stress & Anxiety",
+      "Provides various other health benefits",
+      "Free of artificial colors or flavors",
+      "Free of gluten, lactose, wheat and yeast"
+    ],
+    "bg_gradient": "linear-gradient(180deg, #D35446 0%, #922021 100%)",
+    "image": "/images/products/adults/adult5.png"
+  },
+  {
+    "id": "6",
+    "header": "Cholesterol",
+    "subheader": "Heart Health Made Tasty",
+    "header_desc": "This is a delicious and convenient way to support healthy cholesterol levels. This supplement is Packed with heart friendly ingredients like plant sterols, omega-3s, and essential vitamins.",
+    "description": [
+      "Take control of your heart health with this delicious and convenient supplement, thoughtfully formulated to help maintain healthy cholesterol levels. Packed with heart-friendly ingredients like plant sterols, omega-3 fatty acids, and essential vitamins, it works naturally to reduce LDL (bad cholesterol), support circulation, and promote overall cardiovascular wellness.",
+      "Crafted without artificial colors, flavors, gluten, lactose, wheat, or yeast - just clean, effective support for a healthier heart, every day."
+    ],
+    "benefits": [
+      "Supports healthy cholesterol level",
+      "Promotes heart health",
+      "Supports blood circulation",
+      "Helps reduce bad cholesterol levels (LDL)",
+      "Promotes various other health benefits",
+      "Free of artificial colors or flavors",
+      "Free of gluten, lactose, wheat and yeast"
+    ],
+    "bg_gradient": "linear-gradient(180deg, #817435 0%, #A15713 100%)",
+    "image": "/images/products/adults/adult6.png"
+  },
+  {
+    "id": "7",
+    "header": "Prebiotic",
+    "subheader": "Fuel Your Gut, Boost Your Health",
+    "header_desc": "Inulin is a natural prebiotic fiber that supports digestive health by promoting the growth of good gut bacteria. It helps improve digestion, supports better nutrient absorption, and may aid in blood sugar control and weight management.",
+    "description": [
+      "Support your digestive system naturally with Inulin, a powerful prebiotic fiber that nourishes the beneficial bacteria in your gut. Sourced from nature, this gentle yet effective fiber helps regulate bowel movements, promote a healthy digestive tract, and improve overall nutrient absorption. By encouraging the growth of good bacteria, Inulin helps strengthen your immune system and enhances energy levels — all while keeping your gut balanced and happy.",
+      "Formulated without artificial colors, flavors, gluten, lactose, wheat, or yeast, this clean and simple supplement is ideal for daily gut health support."
+    ],
+    "benefits": [
+      "Normalizing bowel movement",
+      "Maintaining a healthy bowel",
+      "Improving digestion",
+      "Maximizing nutrient absorption",
+      "Increasing energy level",
+      "Supporting the growth of probiotic bacteria (good bacteria)",
+      "Boosting immune system against bacterial and fungal infections",
+      "Free of artificial colors or flavors",
+      "Free of gluten, lactose, wheat and yeast"
+    ],
+    "bg_gradient": "linear-gradient(180deg, #C85C3A 0%, #8D2F1E 100%)",
+    "image": "/images/products/adults/adult7.png"
+  },
+  {
+    "id": "8",
+    "header": "Hair, Skin & Nail Booster",
+    "subheader": "Glow Strong from Within",
+    "header_desc": "A balanced, safe and effective natural formula of vitamins, minerals, and other ingredients designed to stimulate scalp hair growth, maintain healthy skin and nails.",
+    "description": [
+      "Nourish your natural beauty with our Hair, Skin & Nail Booster Gummies — a powerful blend of essential vitamins, minerals, and botanical extracts carefully formulated to support radiant skin, strong nails, and thicker, healthier hair.",
+      "This balanced, clean supplement helps prevent hair loss, enhance hair growth and elasticity, hydrate your skin, and promote an overall youthful appearance — all in a tasty, chewable form."
+    ],
+    "benefits": [
+      "Prevent further hair loss",
+      "Strengthen hair & elasticity",
+      "Maintain healthy skin, hair & nails",
+      "Improve hair quality",
+      "Make hair thick, long & strong",
+      "Improve skin hydration",
+      "Slow down ageing",
+      "Provide various other health benefits",
+      "Free of artificial colors or flavors",
+      "Free of gluten, lactose, wheat and yeast"
+    ],
+    "bg_gradient": "linear-gradient(180deg, #A861A8 0%, #783885 100%)",
+    "image": "/images/products/adults/adult8.png"
+  },
+  {
+    "id": "9",
+    "header": "Adult Multivitamins",
+    "subheader": "Daily Wellness, Made Delicious",
+    "header_desc": "This supplement is packed with all the essential vitamins and minerals that are required to support your active lifestyle.",
+    "description": [
+      "Stay energized, strong, and balanced every day with our Adult Multivitamin Gummies — a thoughtfully crafted blend of essential vitamins and minerals designed to fuel your active, modern lifestyle.",
+      "Each gummy is packed with vital nutrients including Vitamin A, C, D, E, B-complex, Zinc, and more, working together to provide well-rounded support for your immune system, energy levels, heart health, brain function, bone strength, and overall vitality. Whether you're powering through work, workouts, or weekend plans, these easy-to-chew, delicious gummies deliver the daily nourishment your body needs — without the hassle of pills or water.",
+      "Formulated with clean, high-quality ingredients and free from artificial colors, flavors, and preservatives, our multivitamin gummies are a natural choice for those who prioritize their health."
+    ],
+    "benefits": [
+      "Vitamin A: For healthy vision, teeth & bones.",
+      "Vitamin B5: For healthy nerves, growth & development",
+      "Vitamin B6: For healthy heart, nerves, muscle& immunity.",
+      "Vitramin B12: For healthy red blood cells, brain nerve, skin & hair.",
+      "Vitamin C: For healthy teeth, gums & immunity.",
+      "Vitamin D: For healthy bones, nerves & immunity.",
+      "Vitamin E: Antioxidant protection against cell damage.",
+      "Biotin: For healthy hair, skin nails, bones, nerves, growth & development.",
+      "Folic acid: For healthy red blood cells, nerves, intestine, frowth & development.",
+      "Zinc: For healthy digestion, immunity & wound healing."
+    ],
+    "bg_gradient": "linear-gradient(180deg, #814D9E 0%, #5E188C 100%)",
+    "image": "/images/products/adults/adult9.png"
+  },
+  {
+    "id": "10",
+    "header": "Sore Throat Relief",
+    "subheader": "Gentle. Natural. Effective.",
+    "header_desc": "A safe and effective natural herbal supplement designed to relieve pain and inflammation of tonsillitis and pharyngitis.",
+    "description": [
+      "Soothe your sore throat the natural way. Our Sore Throat Relief Gummies are a safe and effective herbal supplement designed to reduce inflammation and ease pain caused by tonsillitis, pharyngitis, and general throat irritation. Crafted with care, these delicious gummies offer powerful relief without any artificial additives."
+    ],
+    "benefits": [
+      "A natural supplement",
+      "Free of artificial colors or flavors",
+      "Free of gluten, lactose, wheat and yeast"
+    ],
+    "bg_gradient": "linear-gradient(90deg, #47AFCB 0%, #297186 100%)",
+    "image": "/images/products/adults/adult10.png"
+  }
+]
