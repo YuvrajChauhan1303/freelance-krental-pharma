@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -56,8 +57,8 @@ const Navbar = () => {
             if (item.isDropdown) {
               return (
                 <li key={index} ref={dropdownRef} className="relative">
-                  <a
-                    href="#"
+                  <button
+                    type="button"
                     onClick={(e) => {
                       e.preventDefault();
                       setProductsOpen((prev) => !prev);
@@ -86,11 +87,11 @@ const Navbar = () => {
                         d="M19 9l-7 7-7-7"
                       />
                     </svg>
-                  </a>
+                  </button>
 
                   {productsOpen && (
                     <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-20">
-                      <a
+                      <Link
                         href="/kids-products"
                         className={`block px-4 py-3 text-sm rounded-t-lg transition-colors ${
                           pathname === "/kids-products"
@@ -100,8 +101,8 @@ const Navbar = () => {
                         onClick={() => setProductsOpen(false)}
                       >
                         Kids Products
-                      </a>
-                      <a
+                      </Link>
+                      <Link
                         href="/adult-products"
                         className={`block px-4 py-3 text-sm rounded-b-lg transition-colors ${
                           pathname === "/adult-products"
@@ -111,7 +112,7 @@ const Navbar = () => {
                         onClick={() => setProductsOpen(false)}
                       >
                         Adult Products
-                      </a>
+                      </Link>
                     </div>
                   )}
                 </li>
@@ -121,7 +122,7 @@ const Navbar = () => {
               const isActive = pathname === href;
               return (
                 <li key={index}>
-                  <a
+                  <Link
                     href={href}
                     className={`px-4 py-2 rounded-lg font-medium uppercase transition-all ${
                       isActive
@@ -130,7 +131,7 @@ const Navbar = () => {
                     }`}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               );
             }

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function PrivacyPolicyPage() {
   return (
     <main className="bg-white text-gray-800 px-6 py-12 max-w-4xl mx-auto">
@@ -26,17 +28,17 @@ export default function PrivacyPolicyPage() {
         <strong>For any questions or concerns:</strong>
         <br />
         Email:{" "}
-        <a
+        <Link
           href="mailto:Krenitalpharma@gmail.com"
           className="text-[#018578] underline"
         >
           Krenitalpharma@gmail.com
-        </a>
+        </Link>
         <br />
         Phone:{" "}
-        <a href="tel:+918401295461" className="text-[#018578] underline">
+        <Link href="tel:+918401295461" className="text-[#018578] underline">
           +91 84012 95461
-        </a>
+        </Link>
         <br />
         Address: 18-A Parth Agriculture, Near Vankar Samaj Hostel, Hansapur,
         Patan, Gujarat, India

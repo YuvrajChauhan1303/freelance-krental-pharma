@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function TermsPage() {
   return (
     <main className="bg-white text-gray-800 px-6 py-12 max-w-4xl mx-auto">
@@ -46,16 +48,16 @@ export default function TermsPage() {
           <strong>Contact:</strong> For any terms-related queries, contact us
           at:
           <br />
-          <a
+          <Link
             href="mailto:Krenitalpharma@gmail.com"
             className="text-[#018578] underline"
           >
             Krenitalpharma@gmail.com
-          </a>{" "}
+          </Link>{" "}
           |{" "}
-          <a href="tel:+918401295461" className="text-[#018578] underline">
+          <Link href="tel:+918401295461" className="text-[#018578] underline">
             +91 84012 95461
-          </a>
+          </Link>
         </li>
       </ol>
     </main>

@@ -104,7 +104,7 @@ const Footer = () => {
           <div className="font-bold mb-1 text-3xl">FOLLOW US</div>
           <div className="flex gap-4 text-2xl">
             {socialLinks.map((item) => (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 target="_blank"
@@ -118,7 +118,7 @@ const Footer = () => {
                 >
                   {item.icon}
                 </span>
-              </a>
+              </Link>
             ))}
           </div>
           <div className="flex flex-col md:flex-row gap-2 md:gap-4 text-xs text-white/80 mt-2">
