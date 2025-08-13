@@ -62,6 +62,10 @@ const KidsProductsPage: React.FC = () => {
   const handleMouseLeave = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
+    // Reset the background to white
+    e.currentTarget.style.background = "white";
+    e.currentTarget.style.transition =
+      "background 2.5s ease-in-out, transform 0.5s ease-in-out";
     // Only affect the img inside, not the box
     const img = e.currentTarget.querySelector("img");
     if (img) {
@@ -75,6 +79,10 @@ const KidsProductsPage: React.FC = () => {
     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
     gradient: string
   ) => {
+    // Change the background of the box
+    e.currentTarget.style.background = gradient;
+    e.currentTarget.style.transition =
+      "background 2.5s ease-in-out, transform 0.5s ease-in-out";
     // Only affect the img inside, not the box
     const img = e.currentTarget.querySelector("img");
     if (img) {
@@ -144,7 +152,7 @@ const KidsProductsPage: React.FC = () => {
         <div className="flex justify-center mt-10">
           <div className="flex flex-col items-center rounded-lg py-4 cursor-pointer bg-white">
             <div
-              className="relative w-64 h-64 mb-4 rounded-lg overflow-hidden"
+              className="relative w-64 h-96 mb-4 rounded-lg overflow-hidden"
               style={{
                 background: "white",
                 transition:

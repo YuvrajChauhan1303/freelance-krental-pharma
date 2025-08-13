@@ -154,7 +154,7 @@ const AdultProductsPage: React.FC = () => {
         <div className="flex justify-center mt-10">
           <div className="flex flex-col items-center rounded-lg py-4 cursor-pointer bg-white">
             <div
-              className="relative w-64 h-64 mb-4 rounded-lg overflow-hidden"
+              className="relative w-64 h-96 mb-4 rounded-lg overflow-hidden"
               style={{
                 background: "white",
                 transition:
