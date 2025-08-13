@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -57,33 +57,39 @@ const gummies: Gummy[] = productNames.map((name, i) => ({
   alt: name,
 }));
 
-const KidsProductsPage: React.FC = () => {
-  // Helper to set transition instantly on mouse leave
-  const handleMouseLeave = (
+// Spinner component
+const Spinner: React.FC = () => (
+  <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-60 z-10">
+    <div className="w-10 h-10 border-4 border-[#018578] border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
+
+const GummyBox: React.FC<{
+  gummy: Gummy;
+  gradient: string;
+  tagline: string;
+  link: string;
+  boxClassName?: string;
+  imgBoxClassName?: string;
+  imgBoxStyle?: React.CSSProperties;
+}> = ({
+  gummy,
+  gradient,
+  tagline,
+  link,
+  boxClassName = "",
+  imgBoxClassName = "",
+  imgBoxStyle = {},
+}) => {
+  const [loading, setLoading] = useState(true);
+
+  // Mouse handlers for background and image scale
+  const handleMouseEnter = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
-    // Reset the background to white
-    e.currentTarget.style.background = "white";
-    e.currentTarget.style.transition =
-      "background 2.5s ease-in-out, transform 0.5s ease-in-out";
-    // Only affect the img inside, not the box
-    const img = e.currentTarget.querySelector("img");
-    if (img) {
-      (img as HTMLImageElement).style.transform = "scale(1)";
-      (img as HTMLImageElement).style.transition = "transform 0.5s";
-    }
-  };
-
-  // On mouse enter, restore transition and animate
-  const handleMouseEnter = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-    gradient: string
-  ) => {
-    // Change the background of the box
     e.currentTarget.style.background = gradient;
     e.currentTarget.style.transition =
       "background 2.5s ease-in-out, transform 0.5s ease-in-out";
-    // Only affect the img inside, not the box
     const img = e.currentTarget.querySelector("img");
     if (img) {
       (img as HTMLImageElement).style.transform = "scale(1.10)";
@@ -91,6 +97,54 @@ const KidsProductsPage: React.FC = () => {
     }
   };
 
+  const handleMouseLeave = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    e.currentTarget.style.background = "white";
+    e.currentTarget.style.transition =
+      "background 2.5s ease-in-out, transform 0.5s ease-in-out";
+    const img = e.currentTarget.querySelector("img");
+    if (img) {
+      (img as HTMLImageElement).style.transform = "scale(1)";
+      (img as HTMLImageElement).style.transition = "transform 0.5s";
+    }
+  };
+
+  return (
+    <div className={`flex flex-col items-center rounded-lg py-4 group cursor-pointer bg-white ${boxClassName}`}>
+      <div
+        className={`relative w-64 h-96 mb-4 rounded-lg overflow-hidden ${imgBoxClassName}`}
+        style={{
+          background: "white",
+          transition: "background 2.5s ease-in-out, transform 0.5s ease-in-out",
+          ...imgBoxStyle,
+        }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        {loading && <Spinner />}
+        <img
+          src={gummy.src}
+          alt={gummy.alt}
+          className="object-contain w-full h-full transition-transform duration-500"
+          loading="lazy"
+          style={{ transition: "transform 0.5s" }}
+          onLoad={() => setLoading(false)}
+        />
+      </div>
+      <span className="font-semibold text-lg mb-1">{gummy.alt}</span>
+      <span className="text-gray-500 text-base mb-1">{tagline}</span>
+      <Link
+        href={link}
+        className="font-bold text-base text-[#018578] tracking-wide hover:underline"
+      >
+        MORE
+      </Link>
+    </div>
+  );
+};
+
+const KidsProductsPage: React.FC = () => {
   return (
     <div className="w-full">
       {/* Banner */}
@@ -112,72 +166,24 @@ const KidsProductsPage: React.FC = () => {
       <div className="max-w-6xl mx-auto mt-12 px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           {gummies.slice(0, 9).map((gummy, idx) => (
-            <div
+            <GummyBox
               key={gummy.alt}
-              className="flex flex-col items-center rounded-lg py-4 group cursor-pointer bg-white"
-            >
-              <div
-                className="relative w-64 h-96 mb-4 rounded-lg overflow-hidden"
-                style={{
-                  background: "white",
-                  transition:
-                    "background 2.5s ease-in-out, transform 0.5s ease-in-out",
-                }}
-                onMouseEnter={(e) => handleMouseEnter(e, gummyGradients[idx])}
-                onMouseLeave={handleMouseLeave}
-              >
-                <img
-                  src={gummy.src}
-                  alt={gummy.alt}
-                  className="object-contain w-full h-full transition-transform duration-500"
-                  loading="lazy"
-                  style={{ transition: "transform 0.5s" }}
-                />
-              </div>
-              <span className="font-semibold text-lg mb-1">{gummy.alt}</span>
-              <span className="text-gray-500 text-base mb-1">
-                {taglines[idx]}
-              </span>
-              <Link
-                href={`/kids-products/${idx + 1}`}
-                className="font-bold text-base text-[#018578] tracking-wide hover:underline"
-              >
-                MORE
-              </Link>
-            </div>
+              gummy={gummy}
+              gradient={gummyGradients[idx]}
+              tagline={taglines[idx]}
+              link={`/kids-products/${idx + 1}`}
+            />
           ))}
         </div>
 
         {/* Last Gummy Centered */}
         <div className="flex justify-center mt-10">
-          <div className="flex flex-col items-center rounded-lg py-4 cursor-pointer bg-white">
-            <div
-              className="relative w-64 h-96 mb-4 rounded-lg overflow-hidden"
-              style={{
-                background: "white",
-                transition:
-                  "background 2.5s ease-in-out, transform 0.5s ease-in-out",
-              }}
-              onMouseEnter={(e) => handleMouseEnter(e, gummyGradients[9])}
-              onMouseLeave={handleMouseLeave}
-            >
-              <img
-                src={gummies[9].src}
-                alt={gummies[9].alt}
-                className="object-contain w-full h-full transition-transform duration-500"
-                loading="lazy"
-                style={{ transition: "transform 0.5s" }}
-              />
-            </div>
-            <span className="font-semibold text-lg mb-1">{gummies[9].alt}</span>
-            <span className="text-gray-500 text-base mb-1">{taglines[9]}</span>
-            <Link
-              href="/kids-products/10"
-              className="font-bold text-base text-[#018578] tracking-wide hover:underline"
-            >
-              MORE
-            </Link>
-          </div>
+          <GummyBox
+            gummy={gummies[9]}
+            gradient={gummyGradients[9]}
+            tagline={taglines[9]}
+            link="/kids-products/10"
+          />
         </div>
       </div>
     </div>
