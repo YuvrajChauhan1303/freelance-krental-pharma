@@ -22,7 +22,7 @@ const gummyGradients: string[] = [
 ];
 
 const bannerImage = {
-  src: "/images/products/kids/banner.png",
+  src: "/images/products/kid/banner.png",
   alt: "Kids Products Banner",
 };
 
@@ -53,7 +53,7 @@ const taglines: string[] = [
 ];
 
 const gummies: Gummy[] = productNames.map((name, i) => ({
-  src: `/images/products/kids/kids${i + 1}.png`,
+  src: `/images/products/kid/kid${i + 1}.png`,
   alt: name,
 }));
 
