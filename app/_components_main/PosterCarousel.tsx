@@ -52,14 +52,14 @@ export function PosterCarousel({ images, className }: PosterCarouselProps) {
               className="flex justify-center items-center"
             >
               <div
-                className="w-full"
-                style={{ height: "80vh", position: "relative" }}
+                className="w-full p-2"
+                style={{ height: "76vh", position: "relative" }}
               >
                 <Image
                   src={img.src}
                   alt={img.alt || `Poster ${idx + 1}`}
                   fill
-                  className="rounded-lg object-cover"
+                  className=" object-cover"
                   style={{ objectPosition: "center" }}
                   loading={idx === 0 ? "eager" : "lazy"}
                   sizes="100vw"

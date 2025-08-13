@@ -4,6 +4,7 @@ import Gummies from "./_components_main/Gummies";
 import ContactUs from "./_components_main/ContactUs";
 import USP from "./_components_main/USP";
 import BlogSection from "./_components_main/BlogSection";
+import Image from "next/image";
 
 const posterImages = [
   { src: "/images/carouselPoster/poster1.png", alt: "Poster 1" },
@@ -35,6 +36,76 @@ export default function Home() {
         />
       </div>
       <USP />
+      <div>
+        <div className="flex flex-wrap justify-center items-center gap-10 my-12">
+          <div className="flex flex-col items-center">
+            <Image
+              src="/images/usp/usp1.png"
+              alt="Gelatin Free"
+              width={128}
+              height={128}
+              className="w-32 h-32 object-contain mb-3"
+            />
+            <span className="text-lg font-semibold text-[#018578]">
+              Gelatin Free
+            </span>
+          </div>
+          <div className="flex flex-col items-center">
+            <Image
+              src="/images/usp/usp2.png"
+              alt="Wheat Free"
+              width={128}
+              height={128}
+              className="w-32 h-32 object-contain mb-3"
+            />
+            <span className="text-lg font-semibold text-[#018578]">
+              Wheat Free
+            </span>
+          </div>
+          <div className="flex flex-col items-center">
+            <Image
+              src="/images/usp/usp3.png"
+              alt="Free of Artificial Colors"
+              width={128}
+              height={128}
+              className="w-32 h-32 object-contain mb-3"
+            />
+            <span className="text-lg font-semibold text-[#018578]">
+              Free of Artificial Colors
+            </span>
+          </div>
+          <div className="flex flex-col items-center">
+            <Image
+              src="/images/usp/usp4.png"
+              alt="Non GMO"
+              width={128}
+              height={128}
+              className="w-32 h-32 object-contain mb-3"
+            />
+            <span className="text-lg font-semibold text-[#018578]">
+              Non GMO
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col items-center justify-center my-12 px-4">
+        <h1 className="text-2xl md:text-3xl uppercase font-extrabold text-[#018578] mb-4 text-center tracking-tight">
+          About Us
+        </h1>
+        <p className="max-w-5xl text-center text-lg md:text-xl text-gray-700 mb-6">
+          Welcome to{" "}
+          <span className="font-semibold text-[#018578]">Krenital Pharma</span>,
+          where innovation meets wellness in every gummy we produce. We are a
+          manufacturer of high-quality nutraceutical gummies, dedicated to
+          providing our customers with delicious, effective, and scientifically
+          formulated supplements. Our mission is to make wellness both enjoyable
+          and accessible by transforming traditional supplements into
+          convenient, tasty gummies that support a healthier lifestyle.
+        </p>
+        <button className="bg-[#018578] hover:bg-[#026e62] text-white font-semibold px-8 py-3 rounded-full shadow-md transition duration-200">
+          Read More
+        </button>
+      </div>
       <div>
         <BlogSection />
       </div>

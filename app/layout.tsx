@@ -12,7 +12,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Krenital Pharma",
-  description: "Live Life Fully",
+  description: "Krenital Pharma offers a delicious range of healthy, gummy-based supplements designed to support a vibrant and healthy life for all ages. Discover our science-backed, tasty gummies for daily wellness and vitality.",
 };
 
 export default function RootLayout({
