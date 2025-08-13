@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -64,10 +64,16 @@ const AdultProductsPage: React.FC = () => {
   ) => {
     e.currentTarget.style.transition = "none";
     e.currentTarget.style.background = "white";
-    e.currentTarget.style.transform = "scale(1)";
+    // Don't touch transform here (no scale on box)
     void e.currentTarget.offsetHeight;
     e.currentTarget.style.transition =
       "background 2.5s ease-in-out, transform 0.5s ease-in-out";
+    // Reset the img scale
+    const img = e.currentTarget.querySelector("img");
+    if (img) {
+      (img as HTMLImageElement).style.transform = "scale(1)";
+      (img as HTMLImageElement).style.transition = "transform 0.5s";
+    }
   };
 
   // On mouse enter, restore transition and animate
@@ -78,7 +84,13 @@ const AdultProductsPage: React.FC = () => {
     e.currentTarget.style.transition =
       "background 2.5s ease-in-out, transform 0.5s ease-in-out";
     e.currentTarget.style.background = gradient;
-    e.currentTarget.style.transform = "scale(1.10)";
+    // Don't scale the box
+    // Scale the img inside
+    const img = e.currentTarget.querySelector("img");
+    if (img) {
+      (img as HTMLImageElement).style.transform = "scale(1.05)";
+      (img as HTMLImageElement).style.transition = "transform 0.5s";
+    }
   };
 
   return (
@@ -121,6 +133,7 @@ const AdultProductsPage: React.FC = () => {
                   alt={gummy.alt}
                   className="object-contain w-full h-full transition-transform duration-500"
                   loading="lazy"
+                  style={{ transition: "transform 0.5s" }}
                 />
               </div>
               <span className="font-semibold text-lg mb-1">{gummy.alt}</span>
@@ -155,6 +168,7 @@ const AdultProductsPage: React.FC = () => {
                 alt={gummies[9].alt}
                 className="object-contain w-full h-full transition-transform duration-500"
                 loading="lazy"
+                style={{ transition: "transform 0.5s" }}
               />
             </div>
             <span className="font-semibold text-lg mb-1">{gummies[9].alt}</span>
