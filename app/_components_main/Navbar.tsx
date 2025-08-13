@@ -39,17 +39,17 @@ const Navbar = () => {
 
   return (
     <div className="flex mx-12 mt-8 items-center justify-between">
-      <div className="w-48 h-16 flex items-center justify-center">
+      <Link href="/" className="w-48 h-16 flex items-center justify-center">
         <Image
           src="/images/logo/logo.png"
           alt="Logo"
           width={225}
-          height={64}
+          height={52}
           className="h-16 w-auto object-contain"
-          style={{ maxHeight: "64px" }}
+          style={{ maxHeight: "52px" }}
           priority
         />
-      </div>
+      </Link>
 
       <div>
         <ul className="flex items-center space-x-6">
