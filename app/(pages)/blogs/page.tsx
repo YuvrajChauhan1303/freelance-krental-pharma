@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Blog from "./_components/Blog";
+import Image from "next/image";
 
 
 type BlogType = {
@@ -65,10 +66,13 @@ const Page: React.FC = () => {
   return (
     <div className="w-full min-h-screen bg-[#f8fdfa] pb-16">
       <div className="w-full h-[40vh] relative mb-8">
-        <img
+        <Image
           src="/images/blogs/header.png"
           alt="Blogs header"
+          fill
+          priority
           className="object-cover w-full h-full"
+          sizes="100vw"
         />
       </div>
 

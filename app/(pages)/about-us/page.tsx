@@ -1,13 +1,17 @@
 "use client";
+import Image from "next/image";
 
 const page = () => {
   return (
     <div className="min-h-screen ">
       <div className="w-full h-[40vh] relative mb-8">
-        <img
+        <Image
           src="/images/aboutus/header.png"
           alt="About Us header"
+          fill
+          priority
           className="object-cover w-full h-full"
+          sizes="100vw"
         />
       </div>
 
@@ -60,10 +64,11 @@ const page = () => {
             work, while being trustworthy and dependable in all our
             relationships. Our drive for innovation keeps us moving forward,
             constantly improving and evolving. We maintain integrity in every
-            decision, standing by what&apos;s right. With a strong customer focus, we
-            prioritize the needs and satisfaction of those we serve. Above all,
-            we believe in delighting our customers—creating experiences that
-            exceed expectations and leave a lasting positive impact.
+            decision, standing by what&apos;s right. With a strong customer
+            focus, we prioritize the needs and satisfaction of those we serve.
+            Above all, we believe in delighting our customers—creating
+            experiences that exceed expectations and leave a lasting positive
+            impact.
           </p>
         </section>
       </div>

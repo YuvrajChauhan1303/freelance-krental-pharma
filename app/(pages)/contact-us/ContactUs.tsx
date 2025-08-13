@@ -53,9 +53,9 @@ export default function ContactPage() {
   return (
     <section className="w-full flex justify-center items-center mt-10">
       <div className="flex flex-col md:flex-row w-full max-w-6xl shadow-lg overflow-hidden">
-        {/* Left - Contact Info */}
+        
         <div className="bg-[#008577] text-white p-8 flex flex-col gap-8 md:w-1/2">
-          {/* Email */}
+          
           <div>
             <Mail className="w-6 h-6 mb-2" />
             <h3 className="text-lg font-semibold">Drop us a line</h3>

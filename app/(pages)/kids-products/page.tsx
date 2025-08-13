@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Gummy {
   src: string;
@@ -89,10 +90,13 @@ const KidsProductsPage: React.FC = () => {
         className="w-full relative"
         style={{ height: "32vh", maxHeight: 350 }}
       >
-        <img
+        <Image
           src={bannerImage.src}
           alt={bannerImage.alt}
+          fill
+          priority
           className="object-cover object-center w-full h-full"
+          sizes="100vw"
         />
       </div>
 

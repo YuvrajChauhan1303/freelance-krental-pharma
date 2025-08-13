@@ -1,14 +1,18 @@
 import React from "react";
+import Image from "next/image";
 
 const Page = () => {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header Image */}
       <div className="w-full h-[40vh] relative mb-8">
-        <img
+        <Image
           src="/images/whykp/header.png"
           alt="Why KP header"
+          fill
+          priority
           className="object-cover w-full h-full"
+          sizes="100vw"
         />
       </div>
 
