@@ -38,21 +38,24 @@ const Navbar = () => {
     label === "Home" ? "/" : "/" + label.toLowerCase().replace(/\s+/g, "-");
 
   return (
-    <div className="flex mx-12 mt-8 items-center justify-between">
-      <Link href="/" className="w-48 h-16 flex items-center justify-center">
+    <div
+      className="flex mx-12 my-2 items-center justify-between max-h-8"
+      style={{ minHeight: "48px" }}
+    >
+      <Link href="/" className="w-32 h-8 flex items-center justify-center">
         <Image
           src="/images/logo/logo.png"
           alt="Logo"
-          width={225}
-          height={52}
-          className="h-16 w-auto object-contain"
-          style={{ maxHeight: "52px" }}
+          width={140}
+          height={36}
+          className="h-10 w-auto object-contain"
+          style={{ maxHeight: "36px" }}
           priority
         />
       </Link>
 
       <div>
-        <ul className="flex items-center space-x-6">
+        <ul className="flex items-center space-x-4">
           {navItems.map((item, index) => {
             if (item.isDropdown) {
               return (
@@ -63,7 +66,7 @@ const Navbar = () => {
                       e.preventDefault();
                       setProductsOpen((prev) => !prev);
                     }}
-                    className={`px-4 py-2 rounded-lg font-medium uppercase transition-all flex items-center gap-1 ${
+                    className={`px-3  rounded-md font-medium uppercase transition-all flex items-center gap-1 ${
                       pathname.startsWith("/products") ||
                       pathname === "/kids-products" ||
                       pathname === "/adult-products"
@@ -90,10 +93,10 @@ const Navbar = () => {
                   </button>
 
                   {productsOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-20">
+                    <div className="absolute left-0 mt-2 w-44 bg-white border border-gray-200 rounded-lg shadow-lg z-20">
                       <Link
                         href="/kids-products"
-                        className={`block px-4 py-3 text-sm rounded-t-lg transition-colors ${
+                        className={`block px-4 py-2 text-sm rounded-t-lg transition-colors ${
                           pathname === "/kids-products"
                             ? "bg-[#018578] text-white"
                             : "text-gray-700 hover:bg-gray-100"
@@ -104,7 +107,7 @@ const Navbar = () => {
                       </Link>
                       <Link
                         href="/adult-products"
-                        className={`block px-4 py-3 text-sm rounded-b-lg transition-colors ${
+                        className={`block px-4 py-2 text-sm rounded-b-lg transition-colors ${
                           pathname === "/adult-products"
                             ? "bg-[#018578] text-white"
                             : "text-gray-700 hover:bg-gray-100"
@@ -124,7 +127,7 @@ const Navbar = () => {
                 <li key={index}>
                   <Link
                     href={href}
-                    className={`px-4 py-2 rounded-lg font-medium uppercase transition-all ${
+                    className={`px-3 py-1.5 rounded-md font-medium uppercase transition-all ${
                       isActive
                         ? "bg-[#018578] text-white"
                         : "text-gray-700 hover:text-black"

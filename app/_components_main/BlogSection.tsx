@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars, no-unused-vars */
 "use client";
 
-import React, { useRef, useEffect, useCallback } from "react";
-import Blog from "./Blog";
+import React, { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 
 const blogs = [
   {
@@ -54,113 +53,250 @@ const blogs = [
 ];
 
 export default function BlogSection() {
-  const [current, setCurrent] = React.useState(0);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const prevIndex = useRef<number>(0);
-  const [direction, setDirection] = React.useState<"left" | "right">("right");
+  // Custom state for active slide
+  const [activeIdx, setActiveIdx] = useState(0);
+  const prevIdx = (activeIdx - 1 + blogs.length) % blogs.length;
+  const nextIdx = (activeIdx + 1) % blogs.length;
 
-  // Move to next slide
-  const nextSlide = useCallback(() => {
-    setDirection("right");
-    setCurrent((prev) => (prev + 1) % blogs.length);
-  }, []);
-
-  // Move to previous slide (not used, but for completeness)
-  const prevSlide = useCallback(() => {
-    setDirection("left");
-    setCurrent((prev) => (prev - 1 + blogs.length) % blogs.length);
-  }, []);
-
-  // Set up autorotate
-  useEffect(() => {
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(nextSlide, 5000);
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-  }, [nextSlide]);
-
-  // Handler for dot click
-  const goToSlide = (idx: number) => {
-    setDirection(idx > current ? "right" : "left");
-    setCurrent(idx);
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-      intervalRef.current = setInterval(nextSlide, 5000);
+  // For keyboard accessibility
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "ArrowLeft") {
+      setActiveIdx((prev) => (prev - 1 + blogs.length) % blogs.length);
+    } else if (e.key === "ArrowRight") {
+      setActiveIdx((prev) => (prev + 1) % blogs.length);
     }
   };
 
-  // For sliding animation, track previous index
+  // Auto-advance every 5 seconds (left to right)
   useEffect(() => {
-    prevIndex.current = current;
-  }, [current]);
-
-  // --- Fix for right border not appearing ---
-  // The right border is set on the left image container in Blog.tsx using inline style:
-  // style={{ borderRight: "0.15vw solid #018578" }}
-  // However, if the parent container has overflow:hidden and the child is 100% width,
-  // the border may be clipped if the child is the last in the flex row.
-  // To ensure the right border is always visible, add a small padding-right to the
-  // flex container and a negative margin-right to compensate, so the border is not clipped.
+    if (blogs.length <= 1) return;
+    const interval = setInterval(() => {
+      setActiveIdx((prev) => (prev + 1) % blogs.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [blogs.length]);
 
   return (
-    <div className="w-full py-12 bg-[#f8fdfa]">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="w-full py-12 bg-[#f8fdfa]">
+      <div className="max-w-[96vw] mx-auto px-0 md:px-0">
         <h2 className="text-3xl font-bold text-[#018578] mb-8 text-center">
           Our Latest Blogs
         </h2>
-        <div className="relative flex flex-col items-center justify-center">
-          <div className="w-full flex justify-center">
-            <div className="w-[90vw] max-w-[90vw] min-w-[75vw] overflow-visible relative h-[24vw] min-h-[16vw] max-h-[32vw]">
-              <div
-                className="flex transition-transform duration-700 ease-in-out pr-[0.2vw] -mr-[0.2vw]"
-                style={{
-                  transform: `translateX(-${current * 100}%)`,
-                  width: `${blogs.length * 100}%`,
-                  height: "100%",
-                }}
+        <div className="flex flex-col items-center justify-center">
+          <div
+            className="w-full mx-auto"
+            tabIndex={0}
+            onKeyDown={handleKeyDown}
+            aria-label="Blog carousel"
+          >
+            <div className="relative flex items-center justify-center w-full">
+              {/* Left Arrow */}
+              <button
+                aria-label="Previous blog"
+                onClick={() =>
+                  setActiveIdx(
+                    (prev) => (prev - 1 + blogs.length) % blogs.length
+                  )
+                }
+                className="absolute left-0 z-10 bg-white border border-[#018578] rounded-full w-[3vw] h-[3vw] flex items-center justify-center shadow hover:bg-[#f0fdfa] transition disabled:opacity-50"
+                style={{ top: "50%", transform: "translateY(-50%)" }}
+                disabled={blogs.length <= 1}
               >
-                {blogs.map((blog, idx) => (
-                  <div
+                <span className="text-[#018578] text-2xl" aria-hidden="true">
+                  &#8592;
+                </span>
+              </button>
+              {/* Carousel Content */}
+              <div className="flex w-full overflow-hidden justify-center items-center">
+                {/* Previous (peek) */}
+                <div
+                  className="transition-transform duration-500 ease-in-out opacity-60 scale-90 hidden md:block"
+                  style={{
+                    minWidth: "60vw",
+                    maxWidth: "82vw",
+                    pointerEvents: "none",
+                  }}
+                  aria-hidden="true"
+                >
+                  <Blog {...blogs[prevIdx]} />
+                </div>
+                {/* Active */}
+                <div
+                  className="transition-transform duration-500 ease-in-out mx-2"
+                  style={{
+                    minWidth: "60vw",
+                    maxWidth: "82vw",
+                  }}
+                >
+                  <Blog {...blogs[activeIdx]} />
+                </div>
+                {/* Next (peek) */}
+                <div
+                  className="transition-transform duration-500 ease-in-out opacity-60 scale-90 hidden md:block"
+                  style={{
+                    minWidth: "60vw",
+                    maxWidth: "82vw",
+                    pointerEvents: "none",
+                  }}
+                  aria-hidden="true"
+                >
+                  <Blog {...blogs[nextIdx]} />
+                </div>
+              </div>
+              {/* Right Arrow */}
+              <button
+                aria-label="Next blog"
+                onClick={() =>
+                  setActiveIdx((prev) => (prev + 1) % blogs.length)
+                }
+                className="absolute right-0 z-10 bg-white border border-[#018578] rounded-full w-[3vw] h-[3vw] flex items-center justify-center shadow hover:bg-[#f0fdfa] transition disabled:opacity-50"
+                style={{ top: "50%", transform: "translateY(-50%)" }}
+                disabled={blogs.length <= 1}
+              >
+                <span className="text-[#018578] text-2xl" aria-hidden="true">
+                  &#8594;
+                </span>
+              </button>
+            </div>
+            {/* Custom Dots */}
+            <div className="flex items-center justify-center mt-6 px-2">
+              <div className="flex gap-2">
+                {blogs.map((_, idx) => (
+                  <button
                     key={idx}
-                    className="w-full flex-shrink-0 flex-grow-0"
-                    style={{
-                      width: "100%",
-                      minWidth: "100%",
-                      maxWidth: "100%",
-                      height: "100%",
-                    }}
-                    aria-hidden={idx !== current}
-                  >
-                    <Blog {...blog} />
-                  </div>
+                    className={`w-3 h-3 rounded-full border-2 border-[#018578] transition-all duration-200 bg-white opacity-70 focus:outline-none focus:ring-2 focus:ring-[#018578] ${
+                      activeIdx === idx
+                        ? "bg-[#018578] scale-110 opacity-100"
+                        : ""
+                    }`}
+                    aria-label={`Go to slide ${idx + 1}`}
+                    onClick={() => setActiveIdx(idx)}
+                  />
                 ))}
               </div>
             </div>
           </div>
-          {/* Dots navigation */}
-          <div className="flex justify-center mt-6 space-x-3">
-            {blogs.map((_, idx) => (
-              <button
-                key={idx}
-                type="button"
-                aria-label={`Go to slide ${idx + 1}`}
-                className={`w-3 h-3 rounded-full border-2 border-[#018578] transition-all duration-200
-                  ${
-                    current === idx
-                      ? "bg-[#018578] scale-110"
-                      : "bg-white opacity-70"
-                  }
-                  focus:outline-none focus:ring-2 focus:ring-[#018578]
-                `}
-                onClick={() => goToSlide(idx)}
-                tabIndex={0}
-              />
-            ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+type BlogProps = {
+  image: { src: string; alt?: string };
+  title: string;
+  author: string;
+  date: string;
+  excerpt: string;
+  readMoreLink: string;
+};
+
+const Blog: React.FC<BlogProps> = ({
+  image,
+  title,
+  author,
+  date,
+  excerpt,
+  readMoreLink,
+}) => {
+  return (
+    <div
+      className="
+        flex 
+        flex-row
+        border-2 
+        border-[#018578] 
+        rounded-none
+        overflow-hidden 
+        bg-white 
+        shadow-md
+        w-full
+        min-w-[60vw]
+        max-w-[82vw]
+        h-[24vw]
+        min-h-[16vw]
+        max-h-[32vw]
+        mx-auto
+      "
+      style={{
+        borderRadius: "0px",
+      }}
+    >
+      <div
+        className="
+          flex-shrink-0 
+          flex 
+          items-center 
+          justify-center
+          w-[25vw]
+          h-full
+          min-w-[22vw]
+          max-w-[50vw]
+          bg-gray-100
+        "
+        style={{
+          borderRight: "0.15vw solid #018578",
+        }}
+      >
+        <img
+          src={image.src}
+          alt={image.alt || "Blog image"}
+          className="w-full h-full object-cover block"
+          width={1}
+          height={1}
+          style={{ objectFit: "cover", height: "100%", width: "100%" }}
+        />
+      </div>
+      <div
+        className="
+          flex 
+          flex-col 
+          justify-between 
+          flex-1
+          py-[3vw]
+          px-[4vw]
+        "
+      >
+        <div>
+          <h2 className="text-[1.6vw] font-bold text-[#018578] mb-[0.5vw] line-clamp-2">
+            {title}
+          </h2>
+          <div className="text-[1vw] text-[#018578] mb-[1vw] capitalize">
+            By <span className="font-semibold">{author}</span> |{" "}
+            <span>{date}</span>
           </div>
+          <p className="text-gray-700 mb-[2vw] text-[0.95vw] leading-relaxed line-clamp-4">
+            {excerpt}
+          </p>
+        </div>
+        <div>
+          <Link
+            href={readMoreLink}
+            className="
+              px-[2vw] 
+              py-[0.8vw] 
+              bg-[#018578] 
+              text-white 
+              rounded 
+              font-semibold 
+              transition 
+              hover:bg-[#01695f] 
+              flex 
+              items-center 
+              gap-2
+              text-[1vw]
+              min-w-[7vw]
+              min-h-[2.5vw]
+              w-fit
+            "
+          >
+            Read More
+            <span aria-hidden="true" className="ml-1">
+              →
+            </span>
+          </Link>
         </div>
       </div>
     </div>
   );
-}
-/* eslint-enable @typescript-eslint/no-unused-vars, no-unused-vars */
+};

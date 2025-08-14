@@ -173,13 +173,13 @@ export default function ContactPage() {
           </form>
         </div>
         {/* Right: Image */}
-        <div className="hidden md:flex flex-1 items-center justify-center bg-[#f6faf9]">
+        <div className="hidden md:flex flex-1 items-center justify-center">
           <Image
-            src="/images/contact/contact-illustration.png"
+            src="/images/landingImages/pic4.png"
             alt="Contact Illustration"
-            width={400}
-            height={400}
-            className="object-contain max-h-[350px] w-auto"
+            width={700}
+            height={700}
+            className="object-contain pt-[4.2rem] max-h-[750px] w-auto"
             priority
           />
         </div>

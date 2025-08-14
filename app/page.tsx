@@ -21,7 +21,7 @@ const gummiesImages = [
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
-      <PosterCarousel className={"my-6"} images={posterImages} />
+      <PosterCarousel className={"mb-6"} images={posterImages} />
       <Marquee />
       <div className="flex gap-48 justify-center w-[100vw] mt-10 mb-8 overflow-hidden">
         <Gummies
@@ -89,7 +89,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center my-12 px-4">
-        <h1 className="text-2xl md:text-3xl uppercase font-extrabold text-[#018578] mb-4 text-center tracking-tight">
+        <h1 className="text-3xl uppercase font-bold text-[#018578] mb-4 text-center tracking-tight">
           About Us
         </h1>
         <p className="max-w-5xl text-center text-lg md:text-xl text-gray-700 mb-6">
