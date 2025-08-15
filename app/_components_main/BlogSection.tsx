@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 const blogs = [
@@ -55,8 +56,6 @@ const blogs = [
 export default function BlogSection() {
   // Custom state for active slide
   const [activeIdx, setActiveIdx] = useState(0);
-  const prevIdx = (activeIdx - 1 + blogs.length) % blogs.length;
-  const nextIdx = (activeIdx + 1) % blogs.length;
 
   // For keyboard accessibility
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
@@ -74,7 +73,11 @@ export default function BlogSection() {
       setActiveIdx((prev) => (prev + 1) % blogs.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [blogs.length]);
+  }, []);
+
+  // Calculate prev/next indices on render, not in variable declarations
+  const prevIdx = (activeIdx - 1 + blogs.length) % blogs.length;
+  const nextIdx = (activeIdx + 1) % blogs.length;
 
   return (
     <section className="w-full py-12 bg-[#f8fdfa]">
@@ -199,6 +202,16 @@ const Blog: React.FC<BlogProps> = ({
   excerpt,
   readMoreLink,
 }) => {
+  // Hydration fix: Only apply borderRight on desktop after mount
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDesktop = () => setIsDesktop(window.innerWidth >= 768);
+    checkDesktop();
+    window.addEventListener("resize", checkDesktop);
+    return () => window.removeEventListener("resize", checkDesktop);
+  }, []);
+
   return (
     <div
       className={`
@@ -243,15 +256,9 @@ const Blog: React.FC<BlogProps> = ({
           md:max-h-none
         `}
         style={
-          {
-            borderRight: undefined,
-            // Only add borderRight on desktop
-            ...(typeof window === "undefined"
-              ? {}
-              : window.innerWidth >= 768
-              ? { borderRight: "0.15vw solid #018578" }
-              : {}),
-          }
+          isDesktop
+            ? { borderRight: "0.15vw solid #018578" }
+            : {}
         }
       >
         <img
