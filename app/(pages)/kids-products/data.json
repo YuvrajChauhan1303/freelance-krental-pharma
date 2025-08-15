@@ -20,7 +20,7 @@
      
     ],
     "bg_gradient": "linear-gradient(180deg, #8DA336 0%, #388335 100%)",
-    "image": "/images/products/kids/kids1.png"
+    "image": "/images/products/kid/kid1.png"
   },
   {
     "id": "2",
@@ -45,7 +45,7 @@
       "Zinc: For healthy digestion, immunity & wound healing."
     ],
     "bg_gradient": "linear-gradient(180deg, #8A4E74 0%, #5F294F 100%)",
-    "image": "/images/products/kids/kids2.png"
+    "image": "/images/products/kid/kid2.png"
   },
   {
     "id": "3",
@@ -69,7 +69,7 @@
       "Free of gluten, lactose, wheat and yeast"
     ],
     "bg_gradient": "linear-gradient(180deg, #A76B27 0%, #8B3C25 100%)",
-    "image": "/images/products/kids/kids3.png"
+    "image": "/images/products/kid/kid3.png"
   },
   {
     "id": "4",
@@ -93,7 +93,7 @@
       "Free of Gluten, Lactose, Wheat, and Yeast"
     ],
     "bg_gradient": "linear-gradient(180deg, #2F7AA1 0%, #1D4269 100%)",
-    "image": "/images/products/kids/kids4.png"
+    "image": "/images/products/kid/kid4.png"
   },
   {
     "id": "6",
@@ -116,7 +116,7 @@
       "Free of gluten, lactose, wheat and yeast"
     ],
     "bg_gradient": "linear-gradient(180deg, #953B79 0%, #416B97 100%)",
-    "image": "/images/products/kids/kids5.png"
+    "image": "/images/products/kid/kid5.png"
   },
   {
     "id": "5",
@@ -139,7 +139,7 @@
       "Free of gluten, lactose, wheat and yeast"
     ],
     "bg_gradient": "linear-gradient(180deg, #3F9996 0%, #484D8C 100%)",
-    "image": "/images/products/kids/kids6.png"
+    "image": "/images/products/kid/kid6.png"
   },
   {
     "id": "7",
@@ -161,7 +161,7 @@
       "Free of gluten, lactose, wheat, and yeast."
     ],
     "bg_gradient": "linear-gradient(180deg, #B25784 0%, #AF8850 100%)",
-    "image": "/images/products/kids/kids7.png"
+    "image": "/images/products/kid/kid7.png"
   },
   {
     "id": "8",
@@ -183,7 +183,7 @@
       "Free of artificial colors or flavors"
     ],
     "bg_gradient": "linear-gradient(180deg, #95A637 0%, #428635 100%)",
-    "image": "/images/products/kids/kids8.png"
+    "image": "/images/products/kid/kid8.png"
   },
   {
     "id": "9",
@@ -205,7 +205,7 @@
       "Free of gluten, lactose, wheat, and yeast."
     ],
     "bg_gradient": "linear-gradient(180deg, #AF7F3A 0%, #9B4357 100%)",
-    "image": "/images/products/kids/kids9.png"
+    "image": "/images/products/kid/kid9.png"
   },
   {
     "id": "10",
@@ -227,6 +227,6 @@
       "Free of gluten, lactose, wheat and yeast"
     ],
     "bg_gradient": "linear-gradient(90deg, #5D8537 0%, #997D1F 100%)",
-    "image": "/images/products/kids/kids10.png"
+    "image": "/images/products/kid/kid10.png"
   }
 ]

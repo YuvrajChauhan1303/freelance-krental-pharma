@@ -110,8 +110,14 @@ const GummyBox: React.FC<{
     }
   };
 
+  // Make the entire box a clickable Link
   return (
-    <div className={`flex flex-col items-center rounded-lg py-4 group cursor-pointer bg-white ${boxClassName}`}>
+    <Link
+      href={link}
+      className={`flex flex-col items-center rounded-lg py-4 group cursor-pointer bg-white ${boxClassName}`}
+      tabIndex={0}
+      style={{ textDecoration: "none" }}
+    >
       <div
         className={`relative w-64 h-96 mb-4 rounded-lg overflow-hidden ${imgBoxClassName}`}
         style={{
@@ -134,13 +140,10 @@ const GummyBox: React.FC<{
       </div>
       <span className="font-semibold text-lg mb-1">{gummy.alt}</span>
       <span className="text-gray-500 text-base mb-1">{tagline}</span>
-      <Link
-        href={link}
-        className="font-bold text-base text-[#018578] tracking-wide hover:underline"
-      >
+      <span className="font-bold text-base text-[#018578] tracking-wide hover:underline">
         MORE
-      </Link>
-    </div>
+      </span>
+    </Link>
   );
 };
 

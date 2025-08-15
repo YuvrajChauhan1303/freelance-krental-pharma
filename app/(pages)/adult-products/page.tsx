@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -57,38 +57,52 @@ const gummies: Gummy[] = productNames.map((name, i) => ({
   alt: name,
 }));
 
-// Simple spinner component
-const Spinner = () => (
-  <div className="absolute inset-0 flex items-center justify-center bg-white/60 z-10">
-    <div className="w-10 h-10 border-4 border-[#018578] border-t-transparent rounded-full animate-spin" />
+// Spinner component
+const Spinner: React.FC = () => (
+  <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-60 z-10">
+    <div className="w-10 h-10 border-4 border-[#018578] border-t-transparent rounded-full animate-spin"></div>
   </div>
 );
 
-type GummyImageBoxProps = {
+const GummyBox: React.FC<{
   gummy: Gummy;
   gradient: string;
   tagline: string;
   link: string;
-};
-
-const GummyImageBox: React.FC<GummyImageBoxProps> = ({
+  boxClassName?: string;
+  imgBoxClassName?: string;
+  imgBoxStyle?: React.CSSProperties;
+}> = ({
   gummy,
   gradient,
   tagline,
   link,
+  boxClassName = "",
+  imgBoxClassName = "",
+  imgBoxStyle = {},
 }) => {
   const [loading, setLoading] = useState(true);
 
-  // Helper to set transition instantly on mouse leave
+  // Mouse handlers for background and image scale
+  const handleMouseEnter = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    e.currentTarget.style.background = gradient;
+    e.currentTarget.style.transition =
+      "background 2.5s ease-in-out, transform 0.5s ease-in-out";
+    const img = e.currentTarget.querySelector("img");
+    if (img) {
+      (img as HTMLImageElement).style.transform = "scale(1.10)";
+      (img as HTMLImageElement).style.transition = "transform 0.5s";
+    }
+  };
+
   const handleMouseLeave = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
-    e.currentTarget.style.transition = "none";
     e.currentTarget.style.background = "white";
-    void e.currentTarget.offsetHeight;
     e.currentTarget.style.transition =
       "background 2.5s ease-in-out, transform 0.5s ease-in-out";
-    // Reset the img scale
     const img = e.currentTarget.querySelector("img");
     if (img) {
       (img as HTMLImageElement).style.transform = "scale(1)";
@@ -96,28 +110,20 @@ const GummyImageBox: React.FC<GummyImageBoxProps> = ({
     }
   };
 
-  // On mouse enter, restore transition and animate
-  const handleMouseEnter = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
-    e.currentTarget.style.transition =
-      "background 2.5s ease-in-out, transform 0.5s ease-in-out";
-    e.currentTarget.style.background = gradient;
-    // Scale the img inside
-    const img = e.currentTarget.querySelector("img");
-    if (img) {
-      (img as HTMLImageElement).style.transform = "scale(1.05)";
-      (img as HTMLImageElement).style.transition = "transform 0.5s";
-    }
-  };
-
+  // Make the entire box a clickable Link
   return (
-    <div className="flex flex-col items-center rounded-lg py-4 group cursor-pointer bg-white">
+    <Link
+      href={link}
+      className={`flex flex-col items-center rounded-lg py-4 group cursor-pointer bg-white ${boxClassName}`}
+      tabIndex={0}
+      style={{ textDecoration: "none" }}
+    >
       <div
-        className="relative w-64 h-96 mb-4 rounded-lg overflow-hidden"
+        className={`relative w-64 h-96 mb-4 rounded-lg overflow-hidden ${imgBoxClassName}`}
         style={{
           background: "white",
           transition: "background 2.5s ease-in-out, transform 0.5s ease-in-out",
+          ...imgBoxStyle,
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -134,20 +140,14 @@ const GummyImageBox: React.FC<GummyImageBoxProps> = ({
       </div>
       <span className="font-semibold text-lg mb-1">{gummy.alt}</span>
       <span className="text-gray-500 text-base mb-1">{tagline}</span>
-      <Link
-        href={link}
-        className="font-bold text-base text-[#018578] tracking-wide hover:underline"
-      >
+      <span className="font-bold text-base text-[#018578] tracking-wide hover:underline">
         MORE
-      </Link>
-    </div>
+      </span>
+    </Link>
   );
 };
 
-const AdultProductsPage: React.FC = () => {
-  // Banner image loading state
-  const [bannerLoading, setBannerLoading] = useState(true);
-
+const KidsProductsPage: React.FC = () => {
   return (
     <div className="w-full">
       {/* Banner */}
@@ -155,7 +155,6 @@ const AdultProductsPage: React.FC = () => {
         className="w-full relative"
         style={{ height: "32vh", maxHeight: 350 }}
       >
-        {bannerLoading && <Spinner />}
         <Image
           src={bannerImage.src}
           alt={bannerImage.alt}
@@ -163,7 +162,6 @@ const AdultProductsPage: React.FC = () => {
           priority
           className="object-cover object-center w-full h-full"
           sizes="100vw"
-          onLoad={() => setBannerLoading(false)}
         />
       </div>
 
@@ -171,7 +169,7 @@ const AdultProductsPage: React.FC = () => {
       <div className="max-w-6xl mx-auto mt-12 px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           {gummies.slice(0, 9).map((gummy, idx) => (
-            <GummyImageBox
+            <GummyBox
               key={gummy.alt}
               gummy={gummy}
               gradient={gummyGradients[idx]}
@@ -183,7 +181,7 @@ const AdultProductsPage: React.FC = () => {
 
         {/* Last Gummy Centered */}
         <div className="flex justify-center mt-10">
-          <GummyImageBox
+          <GummyBox
             gummy={gummies[9]}
             gradient={gummyGradients[9]}
             tagline={taglines[9]}
@@ -195,4 +193,4 @@ const AdultProductsPage: React.FC = () => {
   );
 };
 
-export default AdultProductsPage;
+export default KidsProductsPage;

@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="flex mx-12 my-2 items-center justify-between max-h-8"
+      className="flex mx-12 my-4 items-center justify-between max-h-8"
       style={{ minHeight: "48px" }}
     >
       <Link href="/" className="w-32 h-8 flex items-center justify-center">
@@ -47,9 +47,9 @@ const Navbar = () => {
           src="/images/logo/logo.png"
           alt="Logo"
           width={140}
-          height={36}
-          className="h-10 w-auto object-contain"
-          style={{ maxHeight: "36px" }}
+          height={60}
+          className="h-15 w-auto object-contain"
+          style={{ maxHeight: "60px" }}
           priority
         />
       </Link>
@@ -66,7 +66,7 @@ const Navbar = () => {
                       e.preventDefault();
                       setProductsOpen((prev) => !prev);
                     }}
-                    className={`px-3  rounded-md font-medium uppercase transition-all flex items-center gap-1 ${
+                    className={`px-3 py-1 rounded-md font-medium uppercase transition-all flex items-center gap-1 ${
                       pathname.startsWith("/products") ||
                       pathname === "/kids-products" ||
                       pathname === "/adult-products"
