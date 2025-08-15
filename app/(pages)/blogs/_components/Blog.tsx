@@ -21,8 +21,9 @@ const Blog: React.FC<BlogProps> = ({
   return (
     <div
       className="
-        flex 
-        gap-8 
+        flex flex-col
+        md:flex-row
+        gap-4 md:gap-8
         border-2 
         border-[#018578] 
         rounded-lg 
@@ -37,16 +38,13 @@ const Blog: React.FC<BlogProps> = ({
     >
       <div
         className="
+          w-full
+          h-[36vw] min-h-[180px] max-h-[320px]
+          md:w-[34vw] md:h-[46vh] md:min-w-[20vw] md:min-h-[40vh] md:max-w-[24vw] md:max-h-[60vh]
           flex-shrink-0 
           flex 
           items-center 
           justify-center
-          w-[34vw]
-          h-[46vh]
-          min-w-[20vw]
-          min-h-[40vh]
-          max-w-[24vw]
-          max-h-[60vh]
         "
       >
         <img
@@ -63,14 +61,16 @@ const Blog: React.FC<BlogProps> = ({
           flex-col 
           justify-between 
           flex-1
-          pt-8
-          pb-8
-          pr-8
+          pt-4 md:pt-8
+          pb-4 md:pb-8
+          pr-4 md:pr-8
           pl-4
         "
       >
         <div>
-          <h2 className="text-2xl font-bold text-[#018578] mb-2">{title}</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-[#018578] mb-2">
+            {title}
+          </h2>
           <div className="text-sm text-[#018578] mb-4 capitalize">
             By <span className="font-semibold">{author}</span> |{" "}
             <span>{date}</span>

@@ -119,7 +119,14 @@ const GummyBox: React.FC<{
       style={{ textDecoration: "none" }}
     >
       <div
-        className={`relative w-64 h-96 mb-4 rounded-lg overflow-hidden ${imgBoxClassName}`}
+        className={`
+          relative 
+          w-60 h-72 
+          sm:w-64 sm:h-80 
+          md:w-64 md:h-96 
+          mb-4 rounded-lg overflow-hidden 
+          ${imgBoxClassName}
+        `}
         style={{
           background: "white",
           transition: "background 2.5s ease-in-out, transform 0.5s ease-in-out",
@@ -138,8 +145,8 @@ const GummyBox: React.FC<{
           onLoad={() => setLoading(false)}
         />
       </div>
-      <span className="font-semibold text-lg mb-1">{gummy.alt}</span>
-      <span className="text-gray-500 text-base mb-1">{tagline}</span>
+      <span className="font-semibold text-base sm:text-lg mb-1 text-center">{gummy.alt}</span>
+      <span className="text-gray-500 text-sm sm:text-base mb-1 text-center">{tagline}</span>
       <span className="font-bold text-base text-[#018578] tracking-wide hover:underline">
         MORE
       </span>
@@ -151,23 +158,22 @@ const KidsProductsPage: React.FC = () => {
   return (
     <div className="w-full">
       {/* Banner */}
-      <div
-        className="w-full relative"
-        style={{ height: "32vh", maxHeight: 350 }}
-      >
-        <Image
-          src={bannerImage.src}
-          alt={bannerImage.alt}
-          fill
-          priority
-          className="object-cover object-center w-full h-full"
-          sizes="100vw"
-        />
+      <div className="w-full relative">
+        <div className="relative w-full aspect-[3/1] sm:aspect-[4/1] md:aspect-[5/1] max-h-[350px]">
+          <Image
+            src={bannerImage.src}
+            alt={bannerImage.alt}
+            fill
+            priority
+            className="object-cover object-center w-full h-full"
+            sizes="100vw"
+          />
+        </div>
       </div>
 
       {/* Gummies Grid */}
-      <div className="max-w-6xl mx-auto mt-12 px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <div className="max-w-6xl mx-auto mt-8 sm:mt-12 px-2 sm:px-4">
+        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
           {gummies.slice(0, 9).map((gummy, idx) => (
             <GummyBox
               key={gummy.alt}
@@ -180,7 +186,7 @@ const KidsProductsPage: React.FC = () => {
         </div>
 
         {/* Last Gummy Centered */}
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-8 sm:mt-10">
           <GummyBox
             gummy={gummies[9]}
             gradient={gummyGradients[9]}
