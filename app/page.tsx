@@ -23,7 +23,7 @@ export default function Home() {
     <div className="overflow-x-hidden">
       <PosterCarousel className={"mb-6"} images={posterImages} />
       <Marquee />
-      <div className="flex gap-48 justify-center w-[100vw] mt-10 mb-8 overflow-hidden">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-24 lg:gap-48 w-full max-w-7xl mx-auto mt-10 mb-8 px-2 sm:px-4 overflow-hidden">
         <Gummies
           title="Kids Gummies"
           image={gummiesImages[0]}
@@ -37,8 +37,8 @@ export default function Home() {
       </div>
       <USP />
       <div>
-        <div className="flex flex-wrap justify-center items-center gap-10 my-12">
-          <div className="flex flex-col items-center">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 my-12 w-full max-w-xs lg:max-w-4xl mx-auto">
+          <div className="flex flex-col items-center w-full">
             <Image
               src="/images/usp/usp1.png"
               alt="Gelatin Free"
@@ -46,11 +46,11 @@ export default function Home() {
               height={128}
               className="w-32 h-32 object-contain mb-3"
             />
-            <span className="text-lg font-semibold text-[#018578]">
+            <span className="text-lg font-semibold text-[#018578] text-center">
               Gelatin Free
             </span>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center w-full">
             <Image
               src="/images/usp/usp2.png"
               alt="Wheat Free"
@@ -58,11 +58,11 @@ export default function Home() {
               height={128}
               className="w-32 h-32 object-contain mb-3"
             />
-            <span className="text-lg font-semibold text-[#018578]">
+            <span className="text-lg font-semibold text-[#018578] text-center">
               Wheat Free
             </span>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center w-full">
             <Image
               src="/images/usp/usp3.png"
               alt="Free of Artificial Colors"
@@ -70,11 +70,11 @@ export default function Home() {
               height={128}
               className="w-32 h-32 object-contain mb-3"
             />
-            <span className="text-lg font-semibold text-[#018578]">
+            <span className="text-lg font-semibold text-[#018578] text-center">
               Free of Artificial Colors
             </span>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center w-full">
             <Image
               src="/images/usp/usp4.png"
               alt="Non GMO"
@@ -82,7 +82,7 @@ export default function Home() {
               height={128}
               className="w-32 h-32 object-contain mb-3"
             />
-            <span className="text-lg font-semibold text-[#018578]">
+            <span className="text-lg font-semibold text-[#018578] text-center">
               Non GMO
             </span>
           </div>
@@ -109,21 +109,21 @@ export default function Home() {
       <div>
         <BlogSection />
       </div>
-      <div className="flex justify-center items-center gap-6 my-8">
+      <div className="flex md:flex-row flex-col items-center justify-center gap-6 my-8">
         <img
           src="/images/landingImages/pic1.png"
           alt="Landing Pic 1"
-          className="w-[40.5vw] h-[57vh] object-contain"
+          className="w-[80vw] h-[38vh] sm:w-[80vw] sm:h-[44vh] md:w-[40.5vw] md:h-[57vh] object-contain"
         />
         <img
           src="/images/landingImages/pic2.png"
           alt="Landing Pic 2"
-          className="w-[40.5vw] h-[57vh] object-contain"
+          className="w-[80vw] h-[38vh] sm:w-[80vw] sm:h-[44vh] md:w-[40.5vw] md:h-[57vh] object-contain"
         />
         <img
           src="/images/landingImages/pic3.png"
           alt="Landing Pic 3"
-          className="w-[40.5vw] h-[57vh] object-contain"
+          className="w-[80vw] h-[38vh] sm:w-[80vw] sm:h-[44vh] md:w-[40.5vw] md:h-[57vh] object-contain"
         />
       </div>
       <div>

@@ -201,42 +201,58 @@ const Blog: React.FC<BlogProps> = ({
 }) => {
   return (
     <div
-      className="
-        flex 
-        flex-row
-        border-2 
-        border-[#018578] 
+      className={`
+        flex
+        flex-col
+        md:flex-row
+        border-2
+        border-[#018578]
         rounded-none
-        overflow-hidden 
-        bg-white 
+        overflow-hidden
+        bg-white
         shadow-md
         w-full
         min-w-[60vw]
         max-w-[82vw]
-        h-[24vw]
-        min-h-[16vw]
-        max-h-[32vw]
         mx-auto
-      "
+        ${
+          // Responsive height: fixed for desktop, auto for mobile
+          "h-auto md:h-[24vw] min-h-[16vw] md:max-h-[32vw]"
+        }
+      `}
       style={{
         borderRadius: "0px",
       }}
     >
       <div
-        className="
-          flex-shrink-0 
-          flex 
-          items-center 
+        className={`
+          flex-shrink-0
+          flex
+          items-center
           justify-center
-          w-[25vw]
-          h-full
-          min-w-[22vw]
-          max-w-[50vw]
+          w-full
+          h-[40vw]
+          min-h-[180px]
+          max-h-[320px]
           bg-gray-100
-        "
-        style={{
-          borderRight: "0.15vw solid #018578",
-        }}
+          md:w-[25vw]
+          md:h-full
+          md:min-w-[22vw]
+          md:max-w-[50vw]
+          md:min-h-0
+          md:max-h-none
+        `}
+        style={
+          {
+            borderRight: undefined,
+            // Only add borderRight on desktop
+            ...(typeof window === "undefined"
+              ? {}
+              : window.innerWidth >= 768
+              ? { borderRight: "0.15vw solid #018578" }
+              : {}),
+          }
+        }
       >
         <img
           src={image.src}
@@ -244,51 +260,60 @@ const Blog: React.FC<BlogProps> = ({
           className="w-full h-full object-cover block"
           width={1}
           height={1}
-          style={{ objectFit: "cover", height: "100%", width: "100%" }}
+          style={{
+            objectFit: "cover",
+            height: "100%",
+            width: "100%",
+          }}
         />
       </div>
       <div
-        className="
-          flex 
-          flex-col 
-          justify-between 
+        className={`
+          flex
+          flex-col
+          justify-between
           flex-1
-          py-[3vw]
-          px-[4vw]
-        "
+          py-6
+          px-5
+          md:py-[3vw]
+          md:px-[4vw]
+        `}
       >
         <div>
-          <h2 className="text-[1.6vw] font-bold text-[#018578] mb-[0.5vw] line-clamp-2">
+          <h2 className="text-lg md:text-[1.6vw] font-bold text-[#018578] mb-2 md:mb-[0.5vw] line-clamp-2">
             {title}
           </h2>
-          <div className="text-[1vw] text-[#018578] mb-[1vw] capitalize">
+          <div className="text-sm md:text-[1vw] text-[#018578] mb-3 md:mb-[1vw] capitalize">
             By <span className="font-semibold">{author}</span> |{" "}
             <span>{date}</span>
           </div>
-          <p className="text-gray-700 mb-[2vw] text-[0.95vw] leading-relaxed line-clamp-4">
+          <p className="text-gray-700 mb-4 md:mb-[2vw] text-sm md:text-[0.95vw] leading-relaxed line-clamp-4">
             {excerpt}
           </p>
         </div>
         <div>
           <Link
             href={readMoreLink}
-            className="
-              px-[2vw] 
-              py-[0.8vw] 
-              bg-[#018578] 
-              text-white 
-              rounded 
-              font-semibold 
-              transition 
-              hover:bg-[#01695f] 
-              flex 
-              items-center 
+            className={`
+              px-6 py-2
+              md:px-[2vw] md:py-[0.8vw]
+              bg-[#018578]
+              text-white
+              rounded
+              font-semibold
+              transition
+              hover:bg-[#01695f]
+              flex
+              items-center
               gap-2
-              text-[1vw]
-              min-w-[7vw]
-              min-h-[2.5vw]
+              text-base
+              md:text-[1vw]
+              min-w-[120px]
+              min-h-[40px]
+              md:min-w-[7vw]
+              md:min-h-[2.5vw]
               w-fit
-            "
+            `}
           >
             Read More
             <span aria-hidden="true" className="ml-1">

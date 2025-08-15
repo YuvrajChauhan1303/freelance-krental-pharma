@@ -53,18 +53,20 @@ export function PosterCarousel({ images, className }: PosterCarouselProps) {
             >
               <div
                 className="w-full p-2"
-                style={{ height: "76vh", position: "relative" }}
+                style={{ position: "relative" }}
               >
-                <Image
-                  src={img.src}
-                  alt={img.alt || `Poster ${idx + 1}`}
-                  fill
-                  className=" object-cover"
-                  style={{ objectPosition: "center" }}
-                  loading={idx === 0 ? "eager" : "lazy"}
-                  sizes="100vw"
-                  priority={idx === 0}
-                />
+                <div className="relative w-full h-auto aspect-[16/6]">
+                  <Image
+                    src={img.src}
+                    alt={img.alt || `Poster ${idx + 1}`}
+                    fill
+                    className="object-cover"
+                    style={{ objectPosition: "center" }}
+                    loading={idx === 0 ? "eager" : "lazy"}
+                    sizes="100vw"
+                    priority={idx === 0}
+                  />
+                </div>
               </div>
             </CarouselItem>
           ))}
