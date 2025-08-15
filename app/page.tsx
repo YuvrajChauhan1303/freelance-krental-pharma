@@ -5,6 +5,7 @@ import ContactUs from "./_components_main/ContactUs";
 import USP from "./_components_main/USP";
 import BlogSection from "./_components_main/BlogSection";
 import Image from "next/image";
+import Link from "next/link";
 
 const posterImages = [
   { src: "/images/carouselPoster/poster1.png", alt: "Poster 1" },
@@ -102,9 +103,12 @@ export default function Home() {
           and accessible by transforming traditional supplements into
           convenient, tasty gummies that support a healthier lifestyle.
         </p>
-        <button className="bg-[#018578] hover:bg-[#026e62] text-white font-semibold px-8 py-3 rounded-full shadow-md transition duration-200">
+        <Link
+          href="/about-us"
+          className="bg-[#018578] hover:bg-[#026e62] text-white font-semibold px-8 py-3 rounded-full shadow-md transition duration-200 text-center"
+        >
           Read More
-        </button>
+        </Link>
       </div>
       <div>
         <BlogSection />
