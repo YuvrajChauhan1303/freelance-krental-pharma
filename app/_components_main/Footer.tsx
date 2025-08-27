@@ -6,7 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const socialLinks = [
   {
-    href: "https://instagram.com",
+    href: "https://instagram.com/krenitalpharma",
     label: "Instagram",
     icon: <FaInstagram />,
     color: "hover:text-[#e1306c]",
