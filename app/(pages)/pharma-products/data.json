@@ -1,0 +1,221 @@
+[
+  {
+    "key": "diabetic-division",
+    "productList": [
+      {
+        "productImage": "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod1.png",
+        "productName": "Voglibose",
+        "productDose": "0.2 mg Capsule"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/DIABETIC DIVISION/prod2.png",
+        "productName": "Metformin",
+        "productDose": "500 mg (SR) Tablets"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/DIABETIC DIVISION/prod3.png",
+        "productName": "Gliclazide",
+        "productDose": "400 mg Tablets"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/DIABETIC DIVISION/prod4.png",
+        "productName": "Glimepiride + Metformin",
+        "productDose": "SR Tables (1mg + 500mg)"
+      }
+    ],
+    "productTitle": "Diabetic Division"
+  },
+  {
+    "key": "cardiac-division",
+    "productList": [
+      {
+        "productImage": "/images/PHARMA_ALL/CARDIAC DIVISION/prod1.png",
+        "productName": "Ramipiril",
+        "productDose": "2.5mg Tablets"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/CARDIAC DIVISION/prod2.png",
+        "productName": "Enalapril",
+        "productDose": "2.5mg Tablets"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/CARDIAC DIVISION/prod3.png",
+        "productName": "Atorvastatin",
+        "productDose": "10mg Tablets"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/CARDIAC DIVISION/prod4.png",
+        "productName": "Amlodipine",
+        "productDose": "2.5mg Tablets"
+      }
+    ],
+    "productTitle": "Cardiac Division"
+  },
+  {
+    "key": "neuro-psychiatry-division",
+    "productList": [
+      {
+        "productImage": "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod1.png",
+        "productName": "Fluoxetine",
+        "productDose": "20mg Tablets"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod2.png",
+        "productName": "Doxepin",
+        "productDose": "10mg Capsule"
+      },
+
+      {
+        "productImage": "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod3.png",
+        "productName": "Citalopram",
+        "productDose": "20mg Tablets"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod4.png",
+        "productName": "Betahistine",
+        "productDose": "16mg Capsule"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod5.png",
+        "productName": "Amisulpride",
+        "productDose": "100mg Tablet"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod6.png",
+        "productName": "Alfuzosin",
+        "productDose": "10mg Tablet"
+      }
+    ],
+    "productTitle": "Neuro Psychiatry Division"
+  },
+  {
+    "key": "anti-biotic-division",
+    "productList": [
+      {
+        "productImage": "/images/PHARMA_ALL/ANTI BIOTIC DIVISION/prod1.png",
+        "productName": "Isotretinoin",
+        "productDose": "20mg Capsule"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/ANTI BIOTIC DIVISION/prod2.png",
+        "productName": "Clindamycin",
+        "productDose": "300mg Capsule"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/ANTI BIOTIC DIVISION/prod2.png",
+        "productName": "Ofloxacin",
+        "productDose": "200mg Tablets"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/ANTI BIOTIC DIVISION/prod2.png",
+        "productName": "Azithromycin",
+        "productDose": "250mg Tablets"
+      }
+    ],
+    "productTitle": "Anti biotic Division"
+  },
+  {
+    "key": "gastro-division",
+    "productList": [
+      {
+        "productImage": "/images/PHARMA_ALL/GASTRO DIVISION/prod1.png",
+        "productName": "Dexrabeprazole & Dompridone",
+        "productDose": "10mg+30mg (SR) Capsule"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/GASTRO DIVISION/prod2.png",
+        "productName": "Rabeperazole & Domperidone",
+        "productDose": "20mg+30mg (SR) Tablets"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/GASTRO DIVISION/prod3.png",
+        "productName": "Pantoprazole",
+        "productDose": "40mg Tablets"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/GASTRO DIVISION/prod4.png",
+        "productName": "Dexrabeprazole",
+        "productDose": "10mg Tablets"
+      }
+    ],
+    "productTitle": "gastro Division"
+  },
+  {
+    "key": "analgesic-anti-inflammatory-division",
+    "productList": [
+      {
+        "productImage": "/images/PHARMA_ALL/ANALGESIC ANTI INFLAMMATORY DIVISION/prod1.png",
+        "productName": "Chlorzoxazone",
+        "productDose": "250mg Tablets"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/ANALGESIC ANTI INFLAMMATORY DIVISION/prod2.png",
+        "productName": "Allopurinol",
+        "productDose": "100mg Tablets"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/ANALGESIC ANTI INFLAMMATORY DIVISION/prod3.png",
+        "productName": "Aceclofenac & Rabeprazole",
+        "productDose": "200mg+10mg (SR) Capsule"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/ANALGESIC ANTI INFLAMMATORY DIVISION/prod4.png",
+        "productName": "Aceclofenac",
+        "productDose": "100mg (SR)Tablets"
+      }
+    ],
+    "productTitle": "ANALGESIC ANTI INFLAMMATORY DIVISION"
+  },
+  {
+    "key": "multivitamin-anti-oxidant-division",
+    "productList": [
+      {
+        "productImage": "/images/PHARMA_ALL/MULTI VITAMIN ANTI OXIDANT DIVISION/prod1.png",
+        "productName": "Nicotinamide",
+        "productDose": "45mg Tablets"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/MULTI VITAMIN ANTI OXIDANT DIVISION/prod2.png",
+        "productName": "Benfotiamine",
+        "productDose": "50mg Capsule"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/MULTI VITAMIN ANTI OXIDANT DIVISION/prod3.png",
+        "productName": "Methylcobalamin",
+        "productDose": "1500mcg Tablets"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/MULTI VITAMIN ANTI OXIDANT DIVISION/prod4.png",
+        "productName": "Folic Acid & Clomiphene Citrate",
+        "productDose": "50mcg + 25mg Tablets"
+      }
+    ],
+    "productTitle": "MULTI VITAMIN ANTI OXIDANT DIVISION"
+  },
+  {
+    "key": "anti-fungal-anti-allergic-division",
+    "productList": [
+      {
+        "productImage": "/images/PHARMA_ALL/ANTI FUNGAL ANTI ALLERGIC DIVISION/prod1.png",
+        "productName": "Loratadine",
+        "productDose": "10mg Tablets"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/ANTI FUNGAL ANTI ALLERGIC DIVISION/prod2.png",
+        "productName": "Hydroxyzine",
+        "productDose": "10mg Tablets"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/ANTI FUNGAL ANTI ALLERGIC DIVISION/prod3.png",
+        "productName": "Fluconazole",
+        "productDose": "150mg Capsule"
+      },
+      {
+        "productImage": "/images/PHARMA_ALL/ANTI FUNGAL ANTI ALLERGIC DIVISION/prod4.png",
+        "productName": "Fexofenadine",
+        "productDose": "120mg Tablets"
+      }
+    ],
+    "productTitle": "MULTI VITAMIN ANTI OXIDANT DIVISION"
+  }
+]

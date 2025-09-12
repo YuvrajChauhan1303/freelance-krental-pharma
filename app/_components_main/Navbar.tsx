@@ -123,7 +123,9 @@ const Navbar = () => {
                     className={`px-3 py-1 rounded-md font-medium uppercase transition-all flex items-center gap-1 ${
                       pathname.startsWith("/products") ||
                       pathname === "/kids-products" ||
-                      pathname === "/adult-products"
+                      pathname === "/adult-products" ||
+                      pathname === "/pharma-products" ||
+                      pathname === "/nutra-products"
                         ? "bg-[#018578] text-white"
                         : "text-gray-700 hover:text-black"
                     }`}
@@ -150,7 +152,7 @@ const Navbar = () => {
                     <div className="absolute left-0 mt-2 w-44 bg-white border border-gray-200 rounded-lg shadow-lg z-20">
                       <Link
                         href="/kids-products"
-                        className={`block px-4 py-2 text-sm rounded-t-lg transition-colors ${
+                        className={`block px-4 py-2 text-sm transition-colors ${
                           pathname === "/kids-products"
                             ? "bg-[#018578] text-white"
                             : "text-gray-700 hover:bg-gray-100"
@@ -161,7 +163,7 @@ const Navbar = () => {
                       </Link>
                       <Link
                         href="/adult-products"
-                        className={`block px-4 py-2 text-sm rounded-b-lg transition-colors ${
+                        className={`block px-4 py-2 text-sm transition-colors ${
                           pathname === "/adult-products"
                             ? "bg-[#018578] text-white"
                             : "text-gray-700 hover:bg-gray-100"
@@ -169,6 +171,28 @@ const Navbar = () => {
                         onClick={() => setProductsOpen(false)}
                       >
                         Adult Products
+                      </Link>
+                      <Link
+                        href="/pharma-products"
+                        className={`block px-4 py-2 text-sm transition-colors ${
+                          pathname === "/pharma-products"
+                            ? "bg-[#018578] text-white"
+                            : "text-gray-700 hover:bg-gray-100"
+                        }`}
+                        onClick={() => setProductsOpen(false)}
+                      >
+                        Pharmaceutical Products
+                      </Link>
+                      <Link
+                        href="/nutra-products"
+                        className={`block px-4 py-2 text-sm rounded-b-lg transition-colors ${
+                          pathname === "/nutra-products"
+                            ? "bg-[#018578] text-white"
+                            : "text-gray-700 hover:bg-gray-100"
+                        }`}
+                        onClick={() => setProductsOpen(false)}
+                      >
+                        Nutraceutical Products
                       </Link>
                     </div>
                   )}
@@ -236,7 +260,9 @@ const Navbar = () => {
                         className={`w-full text-left px-3 py-2 rounded-md font-medium uppercase transition-all flex items-center justify-between ${
                           pathname.startsWith("/products") ||
                           pathname === "/kids-products" ||
-                          pathname === "/adult-products"
+                          pathname === "/adult-products" ||
+                          pathname === "/pharma-products" ||
+                          pathname === "/nutra-products"
                             ? "bg-[#018578] text-white"
                             : "text-gray-700 hover:text-black"
                         }`}
@@ -292,6 +318,34 @@ const Navbar = () => {
                             }}
                           >
                             Adult Products
+                          </Link>
+                          <Link
+                            href="/pharma-products"
+                            className={`block px-4 py-2 text-sm rounded-b-lg transition-colors ${
+                              pathname === "/adult-products"
+                                ? "bg-[#018578] text-white"
+                                : "text-gray-700 hover:bg-gray-100"
+                            }`}
+                            onClick={() => {
+                              setMobileProductsOpen(false);
+                              setMobileMenuOpen(false);
+                            }}
+                          >
+                            Pharmaceutical Products
+                          </Link>
+                          <Link
+                            href="/nutra-products"
+                            className={`block px-4 py-2 text-sm rounded-b-lg transition-colors ${
+                              pathname === "/adult-products"
+                                ? "bg-[#018578] text-white"
+                                : "text-gray-700 hover:bg-gray-100"
+                            }`}
+                            onClick={() => {
+                              setMobileProductsOpen(false);
+                              setMobileMenuOpen(false);
+                            }}
+                          >
+                            Neutrasuitical Products
                           </Link>
                         </div>
                       )}

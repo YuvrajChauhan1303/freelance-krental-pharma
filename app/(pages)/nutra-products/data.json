@@ -1,0 +1,230 @@
+[
+  {
+    "key": "beauty",
+    "productList": [
+      {
+        "productImage": "/images/NUTRA_ALL/beauty/prod1.png",
+        "productName": "Triple Action Tablets"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/beauty/prod2.png",
+        "productName": "Skin, Hair & Nail"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/beauty/prod3.png",
+        "productName": "MultiVitamin Tablets"
+      }
+    ],
+    "productTitle": "Beauty"
+  },
+  {
+    "key": "joint",
+    "productList": [
+      {
+        "productImage": "/images/NUTRA_ALL/joints/prod1.png",
+        "productName": "Power Tablets"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/joints/prod2.png",
+        "productName": "Speed Tablets"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/joints/prod3.png",
+        "productName": "Collagen Tablets"
+      }
+    ],
+    "productTitle": "Joint"
+  },
+  {
+    "key": "vitamin-d",
+    "productList": [
+      {
+        "productImage": "/images/NUTRA_ALL/Vitamin D/prod1.png",
+        "productName": "Chewable Tablets for kids"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/Vitamin D/prod2.png",
+        "productName": "Flavoured Chewable Tablets"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/Vitamin D/prod3.png",
+        "productName": "Vitamin D Supplement"
+      }
+    ],
+    "productTitle": "Vitamin D"
+  },
+  {
+    "key": "calcium",
+    "productList": [
+      {
+        "productImage": "/images/NUTRA_ALL/calcium/prod1.png",
+        "productName": "Flavoured Chewable Tablets"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/calcium/prod2.png",
+        "productName": "Power Tablets"
+      }
+    ],
+    "productTitle": "calcium"
+  },
+  {
+    "key": "prenatal-supplements",
+    "productList": [
+      {
+        "productImage": "/images/NUTRA_ALL/PRENATAL SUPPLEMENTS/prod1.png",
+        "productName": "Platinum"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/PRENATAL SUPPLEMENTS/prod2.png",
+        "productName": "Power Tablets"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/PRENATAL SUPPLEMENTS/prod3.png",
+        "productName": "Folic Acid"
+      }
+    ],
+    "productTitle": "prenatal supplements"
+  },
+  {
+    "key": "mens-health-supplements",
+    "productList": [
+      {
+        "productImage": "/images/NUTRA_ALL/MENS HEALTH SUPPLEMENTS/prod1.png",
+        "productName": "Mans Power"
+      }
+    ],
+    "productTitle": "men's health supplements"
+  },
+  {
+    "key": "womans-health-supplements",
+    "productList": [
+      {
+        "productImage": "/images/NUTRA_ALL/WOMANS HEALTH SUPPLEMENTS/prod1.png",
+        "productName": "Womans Power"
+      }
+    ],
+    "productTitle": "women's health supplements"
+  },
+  {
+    "key": "diabetic-supplements",
+    "productList": [
+      {
+        "productImage": "/images/NUTRA_ALL/DIABETIC SUPPLEMENTS/prod1.png",
+        "productName": "Original"
+      }
+    ],
+    "productTitle": "Diabetic supplements"
+  },
+  {
+    "key": "iron-supplements",
+    "productList": [
+      {
+        "productImage": "/images/NUTRA_ALL/IRON SUPPLEMENTS/prod1.png",
+        "productName": "Ferrous Sulphate + Folic Acid"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/IRON SUPPLEMENTS/prod2.png",
+        "productName": "Calcium Aspartate + Vitamins & Minerals"
+      }
+    ],
+    "productTitle": "iron supplements"
+  },
+  {
+    "key": "b-complex-supplements",
+    "productList": [
+      {
+        "productImage": "/images/NUTRA_ALL/B-COMPLEX SUPPLEMENTS/prod1.png",
+        "productName": "Vitamin B-Compex + Zinc + Vitamin C"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/B-COMPLEX SUPPLEMENTS/prod2.png",
+        "productName": "B-COMPLEX"
+      }
+    ],
+    "productTitle": "b-complex supplements"
+  },
+  {
+    "key": "brain-supplements",
+    "productList": [
+      {
+        "productImage": "/images/NUTRA_ALL/BRAIN SUPPLEMENTS/prod1.png",
+        "productName": "Improve Memory"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/BRAIN SUPPLEMENTS/prod2.png",
+        "productName": "Neuro Booster"
+      }
+    ],
+    "productTitle": "brain supplements"
+  },
+  {
+    "key": "hepatoprotective-supplements",
+    "productList": [
+      {
+        "productImage": "/images/NUTRA_ALL/HEPATOPROTECTIVE SUPPLEMENTS/prod1.png",
+        "productName": "Nutritional Tablet"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/HEPATOPROTECTIVE SUPPLEMENTS/prod2.png",
+        "productName": "Essential Phospholipids"
+      }
+    ],
+    "productTitle": "HEPATOPROTECTIVE SUPPLEMENTS"
+  },
+  {
+    "key": "hair-supplements",
+    "productList": [
+      {
+        "productImage": "/images/NUTRA_ALL/HAIR SUPPLEMENTS/prod1.png",
+        "productName": "Hair Growth For Man"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/HAIR SUPPLEMENTS/prod2.png",
+        "productName": "Advance Formula Tablet Woman"
+      }
+    ],
+    "productTitle": "hair SUPPLEMENTS"
+  },
+  {
+    "key": "multivitamin-range",
+    "productList": [
+      {
+        "productImage": "/images/NUTRA_ALL/MULTIVITAMIN RANGE/prod1.png",
+        "productName": "Energy Booster"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/MULTIVITAMIN RANGE/prod2.png",
+        "productName": "Immunity Booster"
+      }
+    ],
+    "productTitle": "multivitamin range"
+  },
+  {
+    "key": "multivitamin-range-kids",
+    "productList": [
+      {
+        "productImage": "/images/NUTRA_ALL/MULTIVITAMIN RANGE KIDS/prod1.png",
+        "productName": "With Lysine"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/MULTIVITAMIN RANGE KIDS/prod2.png",
+        "productName": "Improve Metabolism"
+      }
+    ],
+    "productTitle": "multivitamin range kids"
+  },
+  {
+    "key": "antioxidant-range",
+    "productList": [
+      {
+        "productImage": "/images/NUTRA_ALL/ANTIOXIDANT RANGE/prod1.png",
+        "productName": "Vitamin C Antioxidant Tablets"
+      },
+      {
+        "productImage": "/images/NUTRA_ALL/ANTIOXIDANT RANGE/prod2.png",
+        "productName": "Cranberry Extract 750mg"
+      }
+    ],
+    "productTitle": "antioxidant range"
+  }
+]
