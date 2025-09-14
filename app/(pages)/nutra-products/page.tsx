@@ -116,18 +116,20 @@ interface cardProps{
 
 const Cards = ({src, alt, title, link}: cardProps) => {
   return (
-    <div className="flex flex-col items-center justify-center space-y-2">
-      <div>
+    <div className="flex flex-col items-center justify-center space-y-2 w-full max-w-xs mx-auto">
+      <div className="w-full aspect-[3/4] relative">
         <Image 
-        src={src}
-        alt={alt}
-        width={300}
-        height={400}
+          src={src}
+          alt={alt}
+          fill
+          className="object-contain rounded-lg shadow-md"
+          sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 300px"
+          priority={false}
         />
       </div>
-      <div className="uppercase"> {title}</div>
-      <Link href={link}>
-        <span className="text-[#018578]">
+      <div className="uppercase text-center text-base sm:text-lg font-semibold"> {title}</div>
+      <Link href={link} className="w-fit">
+        <span className="text-[#018578] font-medium hover:underline">
           View Products
         </span>
       </Link>
@@ -137,7 +139,7 @@ const Cards = ({src, alt, title, link}: cardProps) => {
 
 const page = () => {
   return (
-    <div>
+    <div className="w-full min-h-screen bg-white">
       <div className="w-full relative">
         <div className="relative w-full aspect-[3/1] sm:aspect-[4/1] md:aspect-[5/1] max-h-[350px]">
           <Image
@@ -149,13 +151,13 @@ const page = () => {
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-black/50 flex justify-center items-center">
-            <h1 className="text-white text-7xl font-bold uppercase tracking-wide">
-              Nutrasuiticals
+            <h1 className="text-white text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide text-center px-2">
+              Nutraceuticals
             </h1>
           </div>
         </div>
       </div>
-      <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-16 p-6">
+      <div className="mt-10 sm:mt-14 md:mt-20 grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 xl:gap-12 px-2 sm:px-6 md:px-10">
         {productList.map((product) => (
           <Cards key={product.title} {...product} />
         ))}
