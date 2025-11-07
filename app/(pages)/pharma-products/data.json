@@ -2,220 +2,285 @@
   {
     "key": "diabetic-division",
     "productList": [
-      {
-        "productImage": "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod1.png",
-        "productName": "Voglibose",
-        "productDose": "0.2 mg Capsule"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/DIABETIC DIVISION/prod2.png",
-        "productName": "Metformin",
-        "productDose": "500 mg (SR) Tablets"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/DIABETIC DIVISION/prod3.png",
-        "productName": "Gliclazide",
-        "productDose": "400 mg Tablets"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/DIABETIC DIVISION/prod4.png",
-        "productName": "Glimepiride + Metformin",
-        "productDose": "SR Tables (1mg + 500mg)"
-      }
+      "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod1.png",
+      "/images/PHARMA_ALL/DIABETIC DIVISION/prod2.png",
+      "/images/PHARMA_ALL/DIABETIC DIVISION/prod3.png",
+      "/images/PHARMA_ALL/DIABETIC DIVISION/prod4.png"
     ],
-    "productTitle": "Diabetic Division"
+    "sideImage": "/images/PHARMA_ALL/DIABETIC DIVISION/side.png",
+    "productTitle": "Diabetic Division",
+    "productNames": [
+      "Gliclazide 40mg/80mg Tablet",
+      "Gliclazide 60mg ER + Metformin 500mg ER Tablet",
+      "Glimepiride 1mg/2mg Tablet",
+      "Glimepiride 1mg/2mg + Metformin 500mg SR Tablet",
+      "Glimepiride 1mg/2mg + Pioglitazone 15mg + Metformin 500mg SR Tablet",
+      "Metformin HCl 500mg/1000mg SR Tablet",
+      "Metformin HCl 500mg + Alpha-Lipoic Acid 200mg Tablet",
+      "Voglibose 0.2mg/0.3mg Tablet",
+      "Voglibose 0.2mg/0.3mg + Metformin 500mg Tablet"
+    ]
   },
   {
     "key": "cardiac-division",
     "productList": [
-      {
-        "productImage": "/images/PHARMA_ALL/CARDIAC DIVISION/prod1.png",
-        "productName": "Ramipiril",
-        "productDose": "2.5mg Tablets"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/CARDIAC DIVISION/prod2.png",
-        "productName": "Enalapril",
-        "productDose": "2.5mg Tablets"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/CARDIAC DIVISION/prod3.png",
-        "productName": "Atorvastatin",
-        "productDose": "10mg Tablets"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/CARDIAC DIVISION/prod4.png",
-        "productName": "Amlodipine",
-        "productDose": "2.5mg Tablets"
-      }
+      "/images/PHARMA_ALL/CARDIAC DIVISION/prod1.png",
+      "/images/PHARMA_ALL/CARDIAC DIVISION/prod2.png",
+      "/images/PHARMA_ALL/CARDIAC DIVISION/prod3.png",
+      "/images/PHARMA_ALL/CARDIAC DIVISION/prod4.png"
     ],
-    "productTitle": "Cardiac Division"
+    "sideImage": "/images/PHARMA_ALL/CARDIAC DIVISION/side.png",
+    "productTitle": "Cardiac Division",
+    "productNames": [
+      "Amlodipine 2.5mg/5mg/10mg Tablet",
+      "Amlodipine 5mg + Atenolol 50mg Tablet",
+      "Atenolol 25mg/50mg Tablet",
+      "Atorvastatin 10mg/20mg/40mg Tablet",
+      "Atorvastatin + Ezetimibe Tablet",
+      "Atorvastatin 10mg + Fenofibrate 160mg Tablet",
+      "Enalapril 2.5mg/5mg/10mg Tablet",
+      "Losartan 25mg/50mg Tablet",
+      "Losartan 25mg/50mg + Hydrochlorothiazide 12.5mg Tablet",
+      "Metoprolol 25mg/50mg Tablet",
+      "Nitroglycerin 5mg/10mg Tablet",
+      "Olmesartan 20mg/40mg Tablet",
+      "Ramipril 2.5mg/5mg/10mg Tablet",
+      "Rosuvastatin 5mg/10mg/20mg Tablet",
+      "Rosuvastatin 10mg + Fenofibrate 160mg Tablet",
+      "Telmisartan 40mg/60mg/80mg Tablet",
+      "Telmisartan 40mg + Amlodipine 5mg Tablet",
+      "Telmisartan 40mg/80mg + Hydrochlorothiazide 12.5mg Tablet"
+    ]
   },
   {
     "key": "neuro-psychiatry-division",
     "productList": [
-      {
-        "productImage": "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod1.png",
-        "productName": "Fluoxetine",
-        "productDose": "20mg Tablets"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod2.png",
-        "productName": "Doxepin",
-        "productDose": "10mg Capsule"
-      },
-
-      {
-        "productImage": "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod3.png",
-        "productName": "Citalopram",
-        "productDose": "20mg Tablets"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod4.png",
-        "productName": "Betahistine",
-        "productDose": "16mg Capsule"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod5.png",
-        "productName": "Amisulpride",
-        "productDose": "100mg Tablet"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod6.png",
-        "productName": "Alfuzosin",
-        "productDose": "10mg Tablet"
-      }
+      "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod1.png",
+      "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod2.png",
+      "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod3.png",
+      "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod4.png",
+      "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod5.png",
+      "/images/PHARMA_ALL/NEURO PSYCHIATRY DIVISION/prod6.png"
     ],
-    "productTitle": "Neuro Psychiatry Division"
+    "sideImage": "",
+    "productTitle": "Neuro Psychiatry Division",
+    "productNames": [
+      "Alfuzosin 10mg Tablet",
+      "Alprazolam 0.5mg + Sertraline 50mg Tablet",
+      "Amisulpride 50mg/100mg/200mg Tablet",
+      "Amitriptyline 12.5mg/25mg/50mg/75mg Tablet",
+      "Amitriptyline 12.5mg/25mg + Chlordiazepoxide 5mg/10mg Tablet",
+      "Amoxapine 50mg/100mg Tablet",
+      "Aripiprazole 5mg/10mg/15mg/20mg/50mg/100mg Tablet",
+      "Betahistine 8mg/16mg/24mg Tablet",
+      "Betahistine 48mg SR Tablet",
+      "Carbamazepine 200mg Tablet",
+      "Chlordiazepoxide 10mg Tablet",
+      "Citalopram 20mg/40mg Tablet",
+      "Citicoline 500mg Tablet",
+      "Clobazam 5mg/10mg Tablet",
+      "Clonazepam 0.25mg/0.5mg/1mg Uncoated Tablet",
+      "Clonazepam 2mg Tablet",
+      "Clomipramine 25mg/50mg/75mg Tablet",
+      "Clozapine 25mg/50mg/75mg/100mg Tablet",
+      "Desvenlafaxine 50mg/100mg ER Tablet",
+      "Divalproex Sodium 125mg/250mg/500mg/750mg/1000mg ER Tablet",
+      "Domperidone 10mg + Paracetamol 325mg Tablet",
+      "Dothiepin 25mg/50mg/75mg Tablet",
+      "Doxepin 10mg/25mg Capsule",
+      "Duloxetine 20mg/30mg Tablet",
+      "Paroxetine 12.5mg/25mg/37.5mg CR Tablet",
+      "Paroxetine 12.5mg/25mg CR + Clonazepam 0.5mg Tablet",
+      "Piracetam 500mg Syrup",
+      "Piracetam 400mg/800mg Tablet",
+      "Escitalopram 10mg/20mg Tablet",
+      "Escitalopram 5mg/10mg + Clonazepam 0.5mg Tablet",
+      "Etizolam 0.25mg/0.5mg Tablet",
+      "Flunarizine 10mg Tablet",
+      "Flunarizine 10mg + Domperidone 10mg Tablet",
+      "Fluoxetine 20mg/40mg Capsule",
+      "Fluoxetine 20mg + Alprazolam 0.25mg Tablet",
+      "Gabapentin 100mg Tablet",
+      "Imipramine 25mg/50mg/75mg Tablet",
+      "Imipramine 25mg + Diazepam 2mg Tablet",
+      "Lamotrigine 5mg DT/25mg/50mg/100mg Tablet",
+      "Levetiracetam 250mg/500mg/1gm Tablet",
+      "Levodopa 100mg + Carbidopa 10mg Tablet",
+      "Levodopa 250mg + Carbidopa 25mg Tablet",
+      "Levosulpiride 25mg/50mg Tablet",
+      "Levosulpiride 75mg OD Tablet",
+      "Lithium Carbonate 300mg/400mg Tablet",
+      "Lithium Carbonate 450mg SR Tablet",
+      "Lorazepam 1mg/2mg Uncoated Tablet",
+      "Mecobalamin 500mcg + Gabapentin 300mg Tablet",
+      "Mecobalamin 750mcg + Pregabalin 75mg + Pyridoxine (B6) 1.5mg + Folic Acid 75mcg + Biotin 5mg + Folic Acid 1.5mg Tablet",
+      "Memantine HCl 5mg Tablet",
+      "Mirtazapine 7.5mg/15mg/30mg Tablet",
+      "Olanzapine 2.5mg/5mg/7.5mg/10mg Uncoated Tablet",
+      "Olanzapine 15mg Tablet",
+      "Olanzapine 5mg + Fluoxetine 20mg Tablet",
+      "Oxcarbazepine 150mg/300mg SR/600mg SR Tablet",
+      "Paroxetine 10mg/20mg Tablet"
+    ]
   },
   {
     "key": "anti-biotic-division",
     "productList": [
-      {
-        "productImage": "/images/PHARMA_ALL/ANTI BIOTIC DIVISION/prod1.png",
-        "productName": "Isotretinoin",
-        "productDose": "20mg Capsule"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/ANTI BIOTIC DIVISION/prod2.png",
-        "productName": "Clindamycin",
-        "productDose": "300mg Capsule"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/ANTI BIOTIC DIVISION/prod2.png",
-        "productName": "Ofloxacin",
-        "productDose": "200mg Tablets"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/ANTI BIOTIC DIVISION/prod2.png",
-        "productName": "Azithromycin",
-        "productDose": "250mg Tablets"
-      }
+      "/images/PHARMA_ALL/ANTI BIOTIC DIVISION/prod1.png",
+      "/images/PHARMA_ALL/ANTI BIOTIC DIVISION/prod2.png",
+      "/images/PHARMA_ALL/ANTI BIOTIC DIVISION/prod2.png",
+      "/images/PHARMA_ALL/ANTI BIOTIC DIVISION/prod2.png"
     ],
-    "productTitle": "Anti biotic Division"
+    "sideImage": "/images/PHARMA_ALL/ANTI BIOTIC DIVISION/side.png",
+    "productTitle": "Anti biotic Division",
+    "productNames": [
+      "Artemether 20mg/40mg/80mg + Lumefantrine 120mg/240mg/480mg Tablet",
+      "Azithromycin 250mg/500mg Tablet",
+      "Clindamycin 300mg Capsule",
+      "Faropenem 200mg Tablet",
+      "Isotretinoin 20mg/30mg Capsule",
+      "Levofloxacin 250mg/500mg Tablet",
+      "Linezolid 600mg Tablet",
+      "Ofloxacin 200mg/400mg Tablet",
+      "Ofloxacin 200mg + Ornidazole 500mg Tablet",
+      "Hydroxychloroquine 200mg/400mg Tablet"
+    ]
   },
   {
     "key": "gastro-division",
     "productList": [
-      {
-        "productImage": "/images/PHARMA_ALL/GASTRO DIVISION/prod1.png",
-        "productName": "Dexrabeprazole & Dompridone",
-        "productDose": "10mg+30mg (SR) Capsule"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/GASTRO DIVISION/prod2.png",
-        "productName": "Rabeperazole & Domperidone",
-        "productDose": "20mg+30mg (SR) Tablets"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/GASTRO DIVISION/prod3.png",
-        "productName": "Pantoprazole",
-        "productDose": "40mg Tablets"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/GASTRO DIVISION/prod4.png",
-        "productName": "Dexrabeprazole",
-        "productDose": "10mg Tablets"
-      }
+      "/images/PHARMA_ALL/GASTRO DIVISION/prod1.png",
+      "/images/PHARMA_ALL/GASTRO DIVISION/prod2.png",
+      "/images/PHARMA_ALL/GASTRO DIVISION/prod3.png",
+      "/images/PHARMA_ALL/GASTRO DIVISION/prod4.png"
     ],
-    "productTitle": "gastro Division"
+    "sideImage": "/images/PHARMA_ALL/GASTRO DIVISION/side.png",
+    "productTitle": "Gastro Division",
+    "productNames": [
+      "Albendazole Tablet",
+      "Albendazole 400mg + Ivermectin 6mg Tablet",
+      "Chlordiazepoxide 5mg + Clidinium 2.5mg + Dicyclomine 10mg Tablet",
+      "Dexrabeprazole 10mg Tablet",
+      "Dexrabeprazole 10mg + Domperidone 30mg Sustained Release Capsule",
+      "Drotaverine 40mg/80mg Tablet",
+      "Drotaverine 80mg + Aceclofenac 100mg Tablet",
+      "Drotaverine 80mg + Mefenamic Acid 250mg Tablet",
+      "Esomeprazole 40mg Tablet",
+      "Esomeprazole 40mg + Domperidone 30mg Sustained Release Capsule",
+      "Omeprazole 20mg + Domperidone 10mg Capsule",
+      "Omeprazole Magnesium 20mg + Domperidone 10mg Capsule",
+      "Ondansetron 4mg/8mg Mouth Dissolving Tablet",
+      "Pantoprazole 40mg Tablet",
+      "Pantoprazole 40mg + Domperidone 10mg Tablet",
+      "Rabeprazole 20mg Tablet",
+      "Rabeprazole 20mg + Domperidone 10mg Tablet",
+      "Rabeprazole 20mg + Domperidone 30mg SR Capsule",
+      "Mebeverine 135mg Tablet",
+      "Mebeverine 135mg + Chlordiazepoxide 5mg Tablet"
+    ]
   },
   {
     "key": "analgesic-anti-inflammatory-division",
     "productList": [
-      {
-        "productImage": "/images/PHARMA_ALL/ANALGESIC ANTI INFLAMMATORY DIVISION/prod1.png",
-        "productName": "Chlorzoxazone",
-        "productDose": "250mg Tablets"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/ANALGESIC ANTI INFLAMMATORY DIVISION/prod2.png",
-        "productName": "Allopurinol",
-        "productDose": "100mg Tablets"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/ANALGESIC ANTI INFLAMMATORY DIVISION/prod3.png",
-        "productName": "Aceclofenac & Rabeprazole",
-        "productDose": "200mg+10mg (SR) Capsule"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/ANALGESIC ANTI INFLAMMATORY DIVISION/prod4.png",
-        "productName": "Aceclofenac",
-        "productDose": "100mg (SR)Tablets"
-      }
+      "/images/PHARMA_ALL/ANALGESIC ANTI INFLAMMATORY DIVISION/prod1.png",
+      "/images/PHARMA_ALL/ANALGESIC ANTI INFLAMMATORY DIVISION/prod2.png",
+      "/images/PHARMA_ALL/ANALGESIC ANTI INFLAMMATORY DIVISION/prod3.png",
+      "/images/PHARMA_ALL/ANALGESIC ANTI INFLAMMATORY DIVISION/prod4.png"
     ],
-    "productTitle": "ANALGESIC ANTI INFLAMMATORY DIVISION"
+    "sideImage": "/images/PHARMA_ALL/ANALGESIC ANTI INFLAMMATORY DIVISION/side.png",
+    "productTitle": "Analgesic Anti-Inflammatory Division",
+    "productNames": [
+      "Aceclofenac 100mg/200mg SR Tablet",
+      "Aceclofenac 100mg + Diacerein 50mg Tablet",
+      "Aceclofenac 100mg + Paracetamol 325mg Tablet",
+      "Aceclofenac 100mg + Paracetamol 325mg + Chlorzoxazone 250mg/500mg Tablet",
+      "Aceclofenac 100mg + Paracetamol 325mg + Serratiopeptidase 10mg/15mg Tablet",
+      "Aceclofenac 200mg + Rabeprazole 10mg Capsule",
+      "Aceclofenac 200mg SR + Rabeprazole 20mg Capsule",
+      "Aceclofenac 100mg + Thiocolchicoside 4mg/8mg Tablet",
+      "Allopurinol 100mg/300mg Tablet",
+      "Deflazacort 6mg/24mg/30mg Tablet",
+      "Diacerein 50mg + Aceclofenac 100mg Tablet",
+      "Diacerein 50mg + Glucosamine 75mg + MSM 250mg Tablet",
+      "Diclofenac Potassium 50mg + Paracetamol 325mg + Chlorzoxazone 250mg/500mg Tablet",
+      "Diclofenac Potassium 50mg + Paracetamol 325mg + Serratiopeptidase 10mg Tablet",
+      "Diclofenac Potassium 50mg + Rabeprazole 20mg Capsule",
+      "Etodolac Extended Release 600mg Tablet",
+      "Etodolac 400mg + Paracetamol 325mg Tablet",
+      "Etoricoxib 60mg/90mg Tablet",
+      "Febuxostat 40mg/80mg Tablet",
+      "Lornoxicam 4mg/8mg Tablet",
+      "Lornoxicam 4mg/8mg + Paracetamol 325mg Tablet",
+      "Nimesulide 100mg Dispersible Tablet",
+      "Nimesulide 100mg + Paracetamol 325mg + Chlorzoxazone 250mg Tablet",
+      "Nimesulide 100mg + Serratiopeptidase 10mg Tablet",
+      "Paracetamol 650mg Dispersible Tablet",
+      "Paracetamol 325mg + Tramadol 37.5mg Tablet",
+      "Serratiopeptidase 10mg + Diclofenac Potassium 50mg Tablet"
+    ]
   },
   {
     "key": "multivitamin-anti-oxidant-division",
     "productList": [
-      {
-        "productImage": "/images/PHARMA_ALL/MULTI VITAMIN ANTI OXIDANT DIVISION/prod1.png",
-        "productName": "Nicotinamide",
-        "productDose": "45mg Tablets"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/MULTI VITAMIN ANTI OXIDANT DIVISION/prod2.png",
-        "productName": "Benfotiamine",
-        "productDose": "50mg Capsule"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/MULTI VITAMIN ANTI OXIDANT DIVISION/prod3.png",
-        "productName": "Methylcobalamin",
-        "productDose": "1500mcg Tablets"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/MULTI VITAMIN ANTI OXIDANT DIVISION/prod4.png",
-        "productName": "Folic Acid & Clomiphene Citrate",
-        "productDose": "50mcg + 25mg Tablets"
-      }
+      "/images/PHARMA_ALL/MULTI VITAMIN ANTI OXIDANT DIVISION/prod1.png",
+      "/images/PHARMA_ALL/MULTI VITAMIN ANTI OXIDANT DIVISION/prod2.png",
+      "/images/PHARMA_ALL/MULTI VITAMIN ANTI OXIDANT DIVISION/prod3.png",
+      "/images/PHARMA_ALL/MULTI VITAMIN ANTI OXIDANT DIVISION/prod4.png"
     ],
-    "productTitle": "MULTI VITAMIN ANTI OXIDANT DIVISION"
+    "sideImage": "/images/PHARMA_ALL/MULTI VITAMIN ANTI OXIDANT DIVISION/side.png",
+    "productTitle": "Multi Vitamin Anti Oxidant Division",
+    "productNames": [
+      "Calcitriol 0.25mcg + Calcium Citrate 500mg + Zinc Sulphate (Elemental Zinc 7.5mg) Tablet",
+      "Calcitriol 0.25mcg + Elemental Calcium 250mg Tablet",
+      "Calcium Citrate Maleate (Elemental Calcium 250mg) + Cholecalciferol 100 IU + Folic Acid 50mcg + Clomiphene Citrate 25mg/50mg Tablet",
+      "Doxylamine Succinate 10mg/20mg + Pyridoxine 10mg/20mg Tablet",
+      "Ethamsylate 250mg/500mg Tablet",
+      "Ethamsylate 250mg + Tranexamic Acid 250mg Tablet",
+      "Ferrous Ascorbate 100mg + Folic Acid 1.5mg Tablet",
+      "Ferrous Ascorbate 100mg + Folic Acid 1.5mg + Zinc 22.5mg Tablet",
+      "Methylcobalamin 1500mcg Tablet",
+      "Methylcobalamin 1500mcg + Alpha-Lipoic Acid 100mg + Vitamin Tablet",
+      "Methylcobalamin 500mcg + Folic Acid 1500mcg + Alpha-Lipoic Acid 300mg + Benfotiamine 50mg Capsule",
+      "Methylcobalamin 750mcg + Pregabalin 75mg Capsule",
+      "Methylcobalamin 750mcg + Pregabalin 75mg + Vitamin B6 1.5mg + Folic Acid 75mcg + Benfotiamine 7.5mg Tablet",
+      "Vitamin B1 10mg + Vitamin B6 3mg + Folic Acid 1500mcg Capsule",
+      "Methylcobalamin 750mcg + Benfotiamine 150mg + Vitamin B6 1.5mg + Nicotinamide 45mg Tablet",
+      "Methylcobalamin 500mcg + Folic Acid 1.5mg + Alpha-Lipoic Acid 300mg + Benfotiamine 50mg Capsule",
+      "Methylcobalamin 750mcg + Pregabalin 75mg/150mg + Alpha-Lipoic Acid 100mg + Vitamin B6 3mg + Folic Acid 1.5mg Capsule",
+      "Sodium Feredetate 231mg + Folic Acid 1.5mg + Cyanocobalamin 15mcg Tablet",
+      "Tranexamic Acid 250mg Tablet",
+      "Tranexamic Acid 500mg Tablet",
+      "Tranexamic Acid + Mefenamic Acid Tablet"
+    ]
   },
   {
     "key": "anti-fungal-anti-allergic-division",
     "productList": [
-      {
-        "productImage": "/images/PHARMA_ALL/ANTI FUNGAL ANTI ALLERGIC DIVISION/prod1.png",
-        "productName": "Loratadine",
-        "productDose": "10mg Tablets"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/ANTI FUNGAL ANTI ALLERGIC DIVISION/prod2.png",
-        "productName": "Hydroxyzine",
-        "productDose": "10mg Tablets"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/ANTI FUNGAL ANTI ALLERGIC DIVISION/prod3.png",
-        "productName": "Fluconazole",
-        "productDose": "150mg Capsule"
-      },
-      {
-        "productImage": "/images/PHARMA_ALL/ANTI FUNGAL ANTI ALLERGIC DIVISION/prod4.png",
-        "productName": "Fexofenadine",
-        "productDose": "120mg Tablets"
-      }
+      "/images/PHARMA_ALL/ANTI FUNGAL ANTI ALLERGIC DIVISION/prod1.png",
+      "/images/PHARMA_ALL/ANTI FUNGAL ANTI ALLERGIC DIVISION/prod2.png",
+      "/images/PHARMA_ALL/ANTI FUNGAL ANTI ALLERGIC DIVISION/prod3.png",
+      "/images/PHARMA_ALL/ANTI FUNGAL ANTI ALLERGIC DIVISION/prod4.png"
     ],
-    "productTitle": "MULTI VITAMIN ANTI OXIDANT DIVISION"
+    "sideImage": "/images/PHARMA_ALL/ANTI FUNGAL ANTI ALLERGIC DIVISION/side.png",
+    "productTitle": "Anti Fungal Anti Allergic Division",
+    "productNames": [
+      "Ambroxol Hydrochloride 60mg + Paracetamol 325mg + Levocetirizine 2.5mg + Phenylephrine 5mg Tablet",
+      "Dextromethorphan + CPM 2mg Tablet",
+      "Doxofylline 400mg Tablet",
+      "Doxofylline 400mg + Montelukast 10mg Tablet",
+      "Fexofenadine 120mg/180mg Tablet",
+      "Fexofenadine 120mg + Montelukast 10mg Tablet",
+      "Fluconazole 150mg/200mg Tablet/Capsule",
+      "Hydroxyzine 10mg/25mg Tablet",
+      "Itraconazole 100mg Tablet",
+      "Ketoconazole 200mg Tablet",
+      "Levamisole 50mg/150mg Tablet",
+      "Levocetirizine 10mg Dispersible Tablet",
+      "Levocetirizine 5mg + Montelukast 10mg Tablet",
+      "Loratadine 10mg Tablet",
+      "Nimesulide 100mg + Phenylephrine 5mg + CPM 2mg + Caffeine 30mg Tablet",
+      "Phenylephrine 5mg + Paracetamol 325mg + CPM 2mg Tablet",
+      "Terbinafine 250mg Tablet"
+    ]
   }
 ]

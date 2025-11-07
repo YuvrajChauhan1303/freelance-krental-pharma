@@ -63,16 +63,17 @@ interface cardProps{
 const Cards = ({src, alt, title, link}: cardProps) => {
   return (
     <div className="flex flex-col items-center justify-center space-y-2 w-full max-w-xs mx-auto">
-      <div className="w-full aspect-[3/4] relative">
+      <Link href={link} className="block w-full aspect-[3/4] relative">
         <Image 
           src={src}
           alt={alt}
           fill
-          className="object-contain rounded-lg shadow-md"
+          className="object-contain"
           sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 300px"
           priority={false}
         />
-      </div>
+        <span className="sr-only">{title}</span>
+      </Link>
       <div className="uppercase text-center text-base sm:text-lg font-semibold"> {title}</div>
       <Link href={link} className="w-fit">
         <span className="text-[#018578] font-medium hover:underline">
@@ -103,7 +104,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="mt-10 sm:mt-14 md:mt-20 grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 xl:gap-12 px-2 sm:px-6 md:px-10">
+      <div className="mt-10 sm:mt-14 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 xl:gap-12 px-2 sm:px-6 md:px-10">
         {productList.map((product) => (
           <Cards key={product.title} {...product} />
         ))}
