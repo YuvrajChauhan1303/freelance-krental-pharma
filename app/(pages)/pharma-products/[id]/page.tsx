@@ -14,12 +14,32 @@ const chunkArray = (arr: string[], chunkSize: number) => {
   return result;
 };
 
+// Custom hook to detect if the viewport is a laptop or wider (>=1024px)
+function useIsLaptop() {
+  const [isLaptop, setIsLaptop] = React.useState(false);
+
+  React.useEffect(() => {
+    // SSR guard
+    if (typeof window === "undefined") return;
+    const handleResize = () => {
+      setIsLaptop(window.innerWidth >= 1024); // 1024px is Tailwind's 'lg'
+    };
+    handleResize(); // Initial
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return isLaptop;
+}
+
 const PharmaProductPage = () => {
   const params = useParams();
   const productId = params.id as string;
 
   // Find the product data based on the ID
   const productData = data.find(item => item.key === productId);
+
+  const isLaptop = useIsLaptop();
 
   if (!productData) {
     return (
@@ -29,8 +49,10 @@ const PharmaProductPage = () => {
     );
   }
 
-  // Split productNames into columns of max 30 per column
-  const productNameColumns = chunkArray(productData.productNames || [], 30);
+  // On laptop: columns of max 30; on mobile: single column with all items
+  const productNameColumns = isLaptop
+    ? chunkArray(productData.productNames || [], 30)
+    : [productData.productNames || []];
 
   return (
     <div className="w-full min-h-screen bg-white flex flex-col">
@@ -65,7 +87,11 @@ const PharmaProductPage = () => {
               {productNameColumns.map((column, colIdx) => (
                 <ul
                   key={colIdx}
-                  className="list-disc list-inside text-gray-700 text-[4vw] md:text-[1vw] flex-1 min-w-[70vw] max-w-[95vw] md:min-w-[22vw] md:max-w-[50vw] text-left items-start md:mr-auto"
+                  className={`list-disc list-inside text-gray-700 ${
+                    isLaptop
+                      ? "text-[1vw] flex-1 min-w-[22vw] max-w-[50vw] md:mr-auto"
+                      : "text-[4vw] flex-1 min-w-[70vw] max-w-[95vw]"
+                  } text-left items-start`}
                 >
                   {column.map((name, idx) => (
                     <li key={idx} className="py-1">{name}</li>
