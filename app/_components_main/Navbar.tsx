@@ -345,7 +345,7 @@ const Navbar = () => {
                               setMobileMenuOpen(false);
                             }}
                           >
-                            Neutrasuitical Products
+                            Neutraceutical Products
                           </Link>
                         </div>
                       )}
